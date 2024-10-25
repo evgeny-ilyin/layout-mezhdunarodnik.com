@@ -1,0 +1,40 @@
+/**
+ * Backgrounds
+ */
+// .bg-white {
+// 	background: $white;
+// 	--bg-full: #{$white};
+// }
+
+// .bg-full {
+// 	box-shadow: 0 0 0 100vmax var(--bg-full);
+// 	clip-path: inset(0 -100vmax);
+// }
+
+// .bg-full-vertical {
+// 	box-shadow: 0 0 0 100vmax var(--bg-full);
+// 	clip-path: inset(-100vmax 0);
+// }
+
+/**
+ * Selections
+ */
+::-moz-selection {
+	background: $selectionBgr;
+	color: $selectionText;
+}
+
+::selection {
+	background: $selectionBgr;
+	color: $selectionText;
+}
+
+img::-moz-selection {
+	background: rgba($selectionBgr, 0.5);
+	color: transparent;
+}
+
+img::selection {
+	background: rgba($selectionBgr, 0.5);
+	color: transparent;
+}

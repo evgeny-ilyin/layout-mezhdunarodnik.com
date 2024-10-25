@@ -1,0 +1,13 @@
+/* TEAM */
+	Frontend and backend: Evgeny V. Ilyin
+	Contact: Evgeny.V.Ilyin [at] gmail.com
+	Web: https://deviart.ru
+	From: Himki, Moscow, Russia
+
+	Web designer: 
+	From: 
+
+/* SITE */
+	Language: Russian
+	Doctype: HTML5
+	IDE: Visual Studio Code, Figma
