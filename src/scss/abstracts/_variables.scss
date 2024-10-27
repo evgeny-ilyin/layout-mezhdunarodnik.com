@@ -46,6 +46,8 @@ $accent-smaragd: var(--accent-smaragd);
 $black: var(--black);
 $white: var(--white);
 $gray: var(--gray);
+$gray-dark: var(--gray-dark);
+$blue-light: var(--blue-light);
 $red: $brand-red;
 $error: $brand-red;
 
@@ -64,6 +66,12 @@ $text-color: $brand-color-primary;
 /// @type Color
 $placeholder-color: $gray;
 $input-color: $black;
+
+/// Hamburger
+/// @type Length
+$hamburger-size: 35px;
+$hamburger-line: 2px;
+$hamburger-color: $brand-color-primary;
 
 //** SVGs --var
 $svg-fetch-ring: var(--svg-fetch-ring);
@@ -84,8 +92,8 @@ $transition-default: 250ms ease-in-out;
 /// @type Length
 $min-width: 320px !default;
 $max-width: 1440px !default;
-$min-padding: 15px !default;
-$max-padding: 30px !default;
+$min-padding: 18px !default;
+$max-padding: 49px !default;
 
 //** Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
