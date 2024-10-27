@@ -2,7 +2,9 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .header {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid $brand-color-primary;
+	font-family: $family-firs;
+	letter-spacing: 0.01em;
 
 	// .header__wrapper
 	&__wrapper {
@@ -10,14 +12,67 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		position: relative;
-		padding: 10px 0;
-		gap: 0 5px;
+		gap: 0 16px;
+		// position: relative;
+
+		@include resp-from(md) {
+			height: 80px;
+			flex-wrap: nowrap;
+		}
+
+		@include resp-from(lg) {
+			height: 94px;
+		}
+	}
+
+	// .header__lang
+	&__lang {
+		color: $gray;
+		display: none;
+		flex: 0 0 45px;
+		margin-right: 10px;
+		
+		@include resp-from(lg) {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		a {
+			display: flex;
+			gap: 9px;
+			font-size: rem(13);
+			line-height: 1.4;
+			text-decoration: none;
+			white-space: nowrap;
+
+			@include on-hover {
+				color: $brand-color-primary;
+			}
+
+			svg,
+			img {
+				display: none;
+				width: 20px;
+				height: 13px;
+				border: 1px solid $brand-light-gray;
+			}
+
+			&.is-active {
+				font-weight: 600;
+				color: $brand-color-primary;
+
+				svg,
+				img {
+					display: block;
+				}
+			}
+		}
 	}
 
 	// .header__logo
 	&__logo {
-		margin: 10px 0;
+		color: $brand-color-primary;
+		margin: 5px 0;
 
 		@include resp-from(md) {
 			margin: 0;
@@ -25,17 +80,99 @@
 
 		a {
 			display: flex;
-			color: $black;
 		}
 
 		svg {
 			fill: currentColor;
-			width: 261px;
-			height: 65px;
+			width: 175px;
+			height: 50px;
+			transition: width 0s;
 
-			@include resp-from(lg) {
-				transition: width 0s;
+			@include resp-from(xs) {
+				width: 229px;
+				width: clamp(229px, 20vw, 300px);
 			}
+		}
+	}
+
+	// .header__partners
+	&__partners {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		order: -1;
+		width: 100%;
+		height: 47px;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -$min-padding;
+			right: -$min-padding;
+			width: calc(100% + $min-padding * 2);
+			bottom: 0;
+			border-bottom: 1px solid $brand-color-primary;
+
+			@include resp-from(md) {
+				display: none;
+			}
+		}
+
+		@include resp-from(md) {
+			margin: 0 auto;
+			order: 0;
+			width: auto;
+			height: auto;
+			gap: 20px;
+		}
+
+		@include resp-from(lg) {
+			gap: 15px;
+		}
+
+		@include resp-from(xl) {
+			gap: 20px;
+		}
+
+		a {
+			display: block;
+		}
+
+		img {
+		}
+	}
+
+	// .header__contacts
+	&__contacts {
+		display: none;
+		border-right: 1px solid $brand-color-primary;
+
+		@include resp-from(lg) {
+			padding-right: 10px;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			// width: 160px;
+			// width: clamp(160px, 3vw, 200px);
+			flex: 1 0 160px;
+			max-width: 200px;
+		}
+
+		@include resp-from(xl) {
+			padding-right: 18px;
+			width: auto;
+		}
+	}
+
+	// .header__profile
+	&__profile {
+		margin-left: auto;
+
+		@include resp-from(lg) {
+			margin-left: 0;
 		}
 	}
 
@@ -44,5 +181,57 @@
 		display: flex;
 		align-items: center;
 		position: relative;
+	}
+}
+
+.header-address {
+	font-size: rem(12);
+	line-height: 117%;
+}
+
+.header-phone {
+	font-weight: 600;
+	font-size: rem(13);
+	line-height: 94%;
+}
+
+.profile-link {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	text-decoration-color: currentColor;
+
+	@include on-hover {
+		text-decoration-color: transparent;
+	}
+
+	// .profile-link__icon
+	&__icon {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: $blue-light;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img,
+		svg {
+			display: block;
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	// .profile-link__text
+	&__text {
+		display: none;
+		font-size: rem(12);
+		line-height: 117%;
+		width: 55px;
+
+		@include resp-from(lg) {
+			display: block;
+		}
 	}
 }

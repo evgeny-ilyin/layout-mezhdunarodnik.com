@@ -2,6 +2,24 @@
 	<div class="content">
 		<div class="header__wrapper">
 
+			<div class="header__lang">
+				<a href="javascript:void(0)" class="is-active" aria-label="Русский">Ru
+					<svg>
+						<use xlink:href="#flag-ru"></use>
+					</svg>
+				</a>
+				<a href="javascript:void(0)" aria-label="English">Eng
+					<svg>
+						<use xlink:href="#flag-en"></use>
+					</svg>
+				</a>
+				<a href="javascript:void(0)" aria-label="中文">中文
+					<svg>
+						<use xlink:href="#flag-ch"></use>
+					</svg>
+				</a>
+			</div>
+
 			<div class="header__logo">
 				<a href="/" aria-label="Главная страница">
 					<svg>
@@ -9,6 +27,44 @@
 					</svg>
 				</a>
 			</div>
+
+			<div class="header__partners">
+				<a href="javascript:void(0)" aria-label="Президентская академия" rel="nofollow" target="_blank">
+					<img src="@img/logo-partner-1.svg" width="101" height="40" alt="" loading="lazy">
+				</a>
+				<a href="javascript:void(0)" aria-label="ИБДА" rel="nofollow" target="_blank">
+					<img src="@img/logo-partner-2.svg" width="98" height="34" alt="" loading="lazy">
+				</a>
+				<a href="javascript:void(0)" aria-label="PRIME" rel="nofollow" target="_blank">
+					<img src="@img/logo-partner-3.svg" width="57" height="24" alt="" loading="lazy">
+				</a>
+				<a href="javascript:void(0)" aria-label="AACSB" rel="nofollow" target="_blank">
+					<img src="@img/logo-partner-4.svg" width="87" height="28" alt="" loading="lazy">
+				</a>
+			</div>
+
+			<div class="header__contacts">
+				<div class="header-address">
+					Москва, пр-т Вернадского&nbsp;82, корп.&nbsp;2, каб.&nbsp;243
+				</div>
+				<div class="header-phone">
+					<a href="tel:+74999569156">+7 (499) 956-91-56</a>
+				</div>
+			</div>
+
+			<div class="header__profile">
+				<a href="javascript:void(0)" class="profile-link">
+					<div class="profile-link__icon">
+						<svg>
+							<use xlink:href="#icon-profile"></use>
+						</svg>
+					</div>
+					<div class="profile-link__text">
+						Вход в личный кабинет
+					</div>
+				</a>
+			</div>
+
 
 			<div class="header__nav">
 				@@include('nav.html', {})
