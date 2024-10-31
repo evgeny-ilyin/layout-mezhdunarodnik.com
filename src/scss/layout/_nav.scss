@@ -1,121 +1,258 @@
 //*! https://codepen.io/forestdump/pen/LYrMOLa */
-
-.menu-wrapper {
-	@include resp-to(md) {
-		display: flex;
-		flex-direction: column;
-		position: fixed;
-		overflow: hidden;
-		overflow-y: auto;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		background: rgba(#ddd, 0.8);
-		width: 100%;
-		transform: translateX(-100%);
-		transition: transform 0.5s ease-in-out;
-		text-align: center;
-		padding: 70px 0;
-		z-index: 3;
-	}
-}
-
 .nav {
-	// .nav__list
-	&__list {
+	--selection-bgr: #{$accent-svetlo-goluboy};
+	--selection-text: #{$brand-color-primary};
+	color: $brand-light-gray;
+
+	@include resp-from(md) {
+		--gap: 40px 15px;
+	}
+
+	@include resp-from(lg) {
+		--gap: 40px 25px;
+	}
+
+	@include resp-from(xl) {
+		--gap: 55px 33px;
+	}
+
+	// .nav__top
+	&__top {
+		position: relative;
+		gap: 20px;
+		padding: 22px 0;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 10px 20px;
+		align-items: center;
+		// border-bottom: 1px solid $white;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			width: 200vw;
+			transform: translateX(-50vw);
+			border-bottom: 1px solid $white;
+		}
 
 		@include resp-from(md) {
-			flex-direction: row;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: var(--gap);
+		}
+
+		@include resp-from(lg) {
+			grid-template-columns: repeat(5, 1fr);
 		}
 	}
-	// .nav__item
-	&__item {
-		padding: 0;
-		margin: 0;
+
+	// .nav__body
+	&__body {
+		gap: 20px;
+		padding: 22px 0;
+
+		@include resp-from(xs) {
+			columns: 3 155px;
+		}
+
+		@include resp-from(md) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: var(--gap);
+		}
+
+		@include resp-from(lg) {
+			grid-template-columns: repeat(5, 1fr);
+		}
+
+		@include resp-from(xl) {
+			padding: 50px 0 66px;
+		}
 	}
-	// .nav__link
-	&__link {
-		white-space: nowrap;
-		font-weight: 500;
+
+	// .nav__block
+	&__block {
+		display: flex;
+		flex-direction: column;
+		break-inside: avoid;
+		margin-bottom: 23px;
+
+		@include resp-from(md) {
+			margin-bottom: 0;
+		}
+
+		&_last {
+			display: none;
+
+			@include resp-from(lg) {
+				grid-area: 1 / 5 / 3 / 6;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+
+		a {
+			width: fit-content;
+		}
+	}
+
+	// .nav__phone
+	&__phone {
+		@include resp-from(md) {
+			display: none;
+		}
+
+		// .nav__phone_top
+		&_top {
+			display: none;
+
+			@include resp-from(md) {
+				display: block;
+			}
+		}
+	}
+
+	// .nav__contacts
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	// .nav__social
+	&__social {
+		display: flex;
+		gap: 20px;
+
+		svg {
+			fill: $gray;
+			width: 40px;
+			height: 40px;
+		}
+
+		a {
+			display: flex;
+
+			@include on-hover {
+				svg {
+					fill: $brand-red;
+				}
+			}
+		}
+	}
+
+	a {
+		font-family: $family-hint;
+		font-size: rem(16);
+		font-weight: 300;
+		line-height: 106%;
+		margin-bottom: 10px;
+
+		@include on-hover {
+			color: $brand-red !important;
+		}
+
+		@include resp-from(md) {
+			font-size: rem(18);
+			line-height: 122%;
+
+			&[href^="tel:"] {
+				font-size: rem(16);
+			}
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(20);
+			line-height: 110%;
+
+			&[href^="tel:"] {
+				font-size: rem(20);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:nth-last-child(n of .nav-heading) {
+			margin-top: 13px;
+
+			@include resp-from(md) {
+				margin-top: auto;
+			}
+		}
+
+		&.nav-heading {
+			font-family: $family-firs;
+			color: $white;
+			font-size: rem(15);
+			font-weight: 600;
+			line-height: 130%;
+			letter-spacing: 0.03em;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+
+			@include resp-from(md) {
+				font-size: rem(16);
+				line-height: 110%;
+				margin-bottom: 15px;
+			}
+
+			@include resp-from(xl) {
+				font-size: rem(20);
+				margin-bottom: 21px;
+			}
+
+			&:first-child {
+				margin-top: 0 !important;
+			}
+		}
+
+		&.is-active {
+			color: $brand-red;
+			text-decoration-color: currentColor;
+		}
 	}
 }
 
-.menu-toggle {
-	opacity: 0 !important;
-	display: none !important;
-	visibility: hidden !important;
-
-	&:checked {
-		~ .menu-wrapper {
-			transform: translateX(0);
-		}
-
-		~ .hamburger-box .hamburger-inner {
-			transition-delay: 0.12s;
-			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-			transform: rotate(45deg);
-		}
-
-		~ .hamburger-box .hamburger-inner::before {
-			top: 0;
-			transition: top 75ms ease, opacity 75ms ease 0.12s;
-			opacity: 0;
-		}
-
-		~ .hamburger-box .hamburger-inner::after {
-			bottom: 0;
-			transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-			transform: rotate(-90deg);
-		}
-	}
-}
-
-//* squeeze style from https://jonsuh.com/hamburgers/ */
-.hamburger-box {
-	cursor: pointer;
-	position: relative;
+.nav-sub {
+	--grid-padding: #{$min-padding};
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: $hamburger-size;
-	height: $hamburger-size;
-	z-index: 3;
-}
+	justify-content: space-evenly;
+	gap: 10px;
+	padding-right: var(--grid-padding);
+	width: 100%;
+	font-family: $family-hint;
 
-.hamburger-inner,
-.hamburger-inner::after,
-.hamburger-inner::before {
-	position: absolute;
-	width: $hamburger-size;
-	height: $hamburger-line;
-	transition-timing-function: ease;
-	transition-duration: 0.15s;
-	transition-property: transform;
-	background: $hamburger-color;
-}
+	@include resp-from(xl) {
+		--grid-padding: #{$max-padding};
+	}
 
-.hamburger-inner::after,
-.hamburger-inner::before {
-	display: block;
-	content: "";
-}
+	a {
+		font-size: rem(16);
+		padding: 3px 10px 1px;
+		border-radius: 10px;
+		background: transparent;
+		text-decoration: none;
 
-.hamburger-inner {
-	top: 50%;
-	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-	transition-duration: 75ms;
-}
+		@include resp-from(lg) {
+			font-size: rem(20);
+			padding: 1px 10px;
+		}
 
-.hamburger-inner::before {
-	top: -10px;
-	transition: top 75ms ease 0.12s, opacity 75ms ease;
-}
+		@include resp-from(xl) {
+			font-size: rem(21);
+		}
 
-.hamburger-inner::after {
-	bottom: -10px;
-	transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		@include on-event {
+			color: $white;
+			background: $brand-color-primary;
+		}
+
+		&.is-active {
+			color: $white;
+			background: $brand-color-primary;
+		}
+	}
 }
