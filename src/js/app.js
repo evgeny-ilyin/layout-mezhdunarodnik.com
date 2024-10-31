@@ -3,8 +3,9 @@ import * as fn from "./modules/functions.js";
 
 addEventListener("DOMContentLoaded", () => {
 	fn.isTouchDevice();
-	fn.closeMenuHandler();
-	
+	fn.hamburgerMenu();
+
+	// fn.closeMenuHandler();
 	// useDynamicAdapt();
 	// fn.isWebp();
 	// fn.stickyHeader();

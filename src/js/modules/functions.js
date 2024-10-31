@@ -56,17 +56,33 @@ export function stickyHeader() {
 	handleScroll();
 }
 
-export function closeMenuHandler() {
-	const menuToggler = document.getElementById("menu-toggle"),
-		menuWrapper = document.querySelector(".menu-wrapper"),
-		linkClassName = "nav__link";
-	if (!menuToggler || !menuWrapper) return;
+// export function closeMenuHandler() {
+// 	const menuToggler = document.getElementById("menu-toggle"),
+// 		menuWrapper = document.querySelector(".menu-wrapper"),
+// 		linkClassName = "nav__link";
+// 	if (!menuToggler || !menuWrapper) return;
+// 	document.addEventListener("click", (e) => {
+// 		console.log(e.target);
+// 		if (menuToggler.checked) {
+// 			if (!menuWrapper.contains(e.target) || e.target.classList.contains(linkClassName)) {
+// 				menuToggler.click();
+// 			}
+// 		}
+// 	});
+// }
+
+export function hamburgerMenu() {
+	const menuButton = document.getElementById("menu-toggle"),
+		menuWrapper = document.querySelector(".header__nav"),
+		activeClass = "is-active";
+
 	document.addEventListener("click", (e) => {
-		console.log(e.target);
-		if (menuToggler.checked) {
-			if (!menuWrapper.contains(e.target) || e.target.classList.contains(linkClassName)) {
-				menuToggler.click();
-			}
+		if (!menuWrapper.contains(e.target) && !e.target.closest(".hamburger-box") && menuButton.checked) {
+			menuButton.click();
 		}
+	});
+
+	menuButton.addEventListener("change", () => {
+		menuWrapper.classList.toggle(activeClass);
 	});
 }
