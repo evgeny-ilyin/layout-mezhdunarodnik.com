@@ -199,14 +199,14 @@
 
 	// .header__nav
 	&__nav {
-		position: fixed;
+		position: absolute;
 		z-index: 1;
 		overflow: hidden;
 		overflow-y: auto;
 		background: $brand-color-primary;
 		color: $white;
 		width: 100%;
-		transform: translateY(-101%);
+		transform: translateY(calc(-100% - var(--main-header-height) - 1px));
 		transition: transform 0.5s ease-in-out;
 
 		&.is-active {
