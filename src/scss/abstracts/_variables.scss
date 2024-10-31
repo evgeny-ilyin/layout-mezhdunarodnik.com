@@ -41,22 +41,24 @@ $accent-malahit: var(--accent-malahit);
 $accent-biryuza: var(--accent-biryuza);
 $accent-smaragd: var(--accent-smaragd);
 
+$brand-dark-blue-HEX: #101551;
+
 /// Simple colors
 /// @type Color
 $black: var(--black);
 $white: var(--white);
 $gray: var(--gray);
 $gray-dark: var(--gray-dark);
-$blue-light: var(--blue-light);
 $red: $brand-red;
 $error: $brand-red;
 
 $brand-color-primary: $brand-dark-blue !default;
 
-/// Selection color
+/// Selection color for imgages
 /// @type Color
-$selectionBgr: $brand-color-primary;
-$selectionText: $white;
+$selectionBgr: var(--selection-bgr);
+$selectionText: var(--selection-text);
+$selectionBgrImg: rgba($brand-dark-blue-HEX, 0.5);
 
 /// Text color
 /// @type Color

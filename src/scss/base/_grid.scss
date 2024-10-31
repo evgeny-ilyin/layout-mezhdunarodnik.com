@@ -21,16 +21,17 @@
  * Content
  */
 .content {
+	--grid-padding: #{$min-padding};
 	max-width: $max-width;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $min-padding;
-	padding-right: $min-padding;
+	padding-left: var(--grid-padding);
+	padding-right: var(--grid-padding);
 	position: relative;
+	width: 100%;
 
 	@include resp-from(xl) {
-		padding-left: $max-padding;
-		padding-right: $max-padding;
+		--grid-padding: #{$max-padding};
 	}
 
 	// .content_wide
