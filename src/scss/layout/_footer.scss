@@ -72,6 +72,18 @@
 		svg {
 			width: 100%;
 			height: 100%;
+
+			@include resp-from(md) {
+				height: 260px;
+			}
+
+			@include resp-from(lg) {
+				height: 300px;
+			}
+
+			@include resp-from(xl) {
+				height: 100%;
+			}
 		}
 	}
 
