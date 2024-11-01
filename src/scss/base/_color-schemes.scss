@@ -1,15 +1,23 @@
 /**
  * Backgrounds
  */
-// .bg-white {
-// 	background: $white;
-// 	--bg-full: #{$white};
-// }
+.bg-white {
+	background: $white;
+	--bg-full: #{$white};
+}
 
-// .bg-full {
-// 	box-shadow: 0 0 0 100vmax var(--bg-full);
-// 	clip-path: inset(0 -100vmax);
-// }
+.bg-dark-blue {
+	color: $white;
+	background: $brand-dark-blue;
+	--bg-full: #{$brand-dark-blue};
+	--selection-bgr: #{$accent-svetlo-goluboy};
+	--selection-text: #{$brand-color-primary};
+}
+
+.bg-full {
+	box-shadow: 0 0 0 100vmax var(--bg-full);
+	clip-path: inset(0 -100vmax);
+}
 
 // .bg-full-vertical {
 // 	box-shadow: 0 0 0 100vmax var(--bg-full);

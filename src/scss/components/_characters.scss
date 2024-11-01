@@ -23,6 +23,11 @@
 		font-size: rem(20);
 	}
 
+	// .frame_brand-red
+	&_brand-red {
+		background: $brand-red;
+	}
+
 	// .frame_accent-siniy
 	&_accent-siniy {
 		background: $accent-siniy;
