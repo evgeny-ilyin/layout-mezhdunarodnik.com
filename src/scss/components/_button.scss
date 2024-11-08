@@ -52,9 +52,11 @@
 		background: $brand-red;
 		border-color: $brand-red;
 
-		@include on-hover {
-			background: $accent-brusnika;
-			border-color: $accent-brusnika;
+		@media (hover: hover) {
+			@include on-hover {
+				background: $accent-brusnika;
+				border-color: $accent-brusnika;
+			}
 		}
 	}
 
@@ -62,6 +64,6 @@
 	&_small {
 		padding: 3px 12px 0;
 		min-height: 29px;
-		font-size: rem(14);
+		font-size: rem(14) !important;
 	}
 }
