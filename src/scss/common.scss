@@ -20,16 +20,18 @@
 @import "base/color-schemes";
 
 // 4. Layout-related sections
-// @import "layout/header";
-// @import "layout/nav";
-// @import "layout/footer";
+@import "layout/blocks/block-text";
+@import "layout/blocks/history-timeline";
+@import "layout/blocks/tab-steps";
 
 // 5. Components
 @import "components/characters";
 @import "components/button";
 @import "components/form";
 @import "components/checkbox";
-@import "components/cookies";
+@import "components/accordion";
+// @import "components/cookies";
+@import "components/common-small-elements";
 @import "components/scrollbar";
 @import "components/svg-sprite";
 

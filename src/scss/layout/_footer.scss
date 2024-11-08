@@ -2,8 +2,12 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer {
+	padding-top: 35px;
+
 	// .footer__wrapper
 	&__wrapper {
+		--link-decoration-color: #{colorRGB("white")};
+		--link-decoration-alpha: 0.4;
 		padding: 24px 0 43px;
 		display: flex;
 		flex-direction: column;
@@ -51,14 +55,7 @@
 
 	// .footer__header
 	&__header {
-		font-size: rem(32);
-		font-weight: 600;
-		line-height: 110%;
 		padding: 30px 0;
-
-		@include resp-from(lg) {
-			font-size: rem(54);
-		}
 	}
 
 	// .footer__contacts
@@ -107,17 +104,19 @@
 	&__row {
 		@include resp-from(md) {
 			display: flex;
-			gap: 20px;
+			align-items: baseline;
+			gap: 10px;
 		}
 	}
 
 	// .f-contacts__label
 	&__label {
 		font-size: rem(16);
+		font-weight: 300;
 		padding-bottom: 12px;
 
 		@include resp-from(md) {
-			padding: 4px 0 0;
+			padding: 0;
 			flex: 0 0 107px;
 		}
 

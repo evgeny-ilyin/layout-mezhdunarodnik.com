@@ -27,6 +27,17 @@
 	}
 }
 
+/// Получить цвет #HEX по имени
+@function colorHEX($color-name) {
+	@return map.get($colors, $color-name);
+}
+
+/// Получить цвет #RGB по имени
+@function colorRGB($color-name) {
+	$hex: colorHEX($color-name);
+	@return red($hex), green($hex), blue($hex);
+}
+
 //** Not used yet
 /// Native `url(..)` function wrapper
 /// @param {String} $base - base URL for the asset

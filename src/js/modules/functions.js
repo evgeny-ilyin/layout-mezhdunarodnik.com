@@ -86,3 +86,116 @@ export function hamburgerMenu() {
 		menuWrapper.classList.toggle(activeClass);
 	});
 }
+
+export function clickAndDrag() {
+	document.addEventListener("mousedown", (e) => {
+		const scroll_speed = 1.5,
+			draggableClass = "js-draggable",
+			draggingClass = "js-dragging", // flag for other functions
+			el = e.target.closest(`.${draggableClass}`);
+
+		if (!el) return;
+
+		let isDown = false,
+			startX,
+			scrollLeft;
+
+		e.preventDefault();
+
+		isDown = true;
+		startX = e.pageX - el.offsetLeft;
+		scrollLeft = el.scrollLeft;
+
+		// prevent default child behavior
+		document.addEventListener("click", function (e) {
+			if (el.contains(e.target)) {
+				if (el.classList.contains(draggingClass)) {
+					// оставляем возможность клика ссылок
+					e.preventDefault();
+				}
+			}
+		});
+
+		el.addEventListener("mouseleave", () => {
+			isDown = false;
+		});
+
+		el.addEventListener("mouseup", () => {
+			isDown = false;
+
+			// remove the dragging class after a short delay to prevent other click events
+			setTimeout(() => {
+				el.classList.remove(draggingClass);
+			}, 250);
+		});
+
+		el.addEventListener("mousemove", (e) => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - el.offsetLeft,
+				walk = (x - startX) * scroll_speed; // scroll fast
+			el.scrollLeft = scrollLeft - walk;
+
+			if (scrollLeft !== el.scrollLeft) {
+				el.classList.add(draggingClass);
+			}
+		});
+	});
+}
+
+export function scrollHorisontallyByWheel() {
+	const elements = document.querySelectorAll(".js-wheel-scroll-x");
+	elements.forEach((el) => {
+		el.addEventListener("wheel", (event) => {
+			event.preventDefault();
+			el.scrollBy({
+				left: event.deltaY < 0 ? -200 : 200,
+			});
+		});
+	});
+}
+
+export function accordion() {
+	const triggers = document.querySelectorAll(".js-accordion__trigger"),
+		isOpenedClass = "is-opened",
+		isEnabledClass = "on";
+	triggers.forEach((trigger) => {
+		const accordionParent = trigger.parentElement,
+			accordionContent = trigger.nextElementSibling;
+		trigger.addEventListener("click", () => {
+			if (accordionParent.classList.contains(isEnabledClass)) {
+				accordionParent.classList.toggle(isOpenedClass);
+				if (accordionContent.style.maxHeight) {
+					accordionContent.style.maxHeight = null;
+				} else {
+					accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+				}
+			}
+		});
+
+		["load", "resize"].forEach((evt) =>
+			window.addEventListener(evt, () => {
+				if (accordionContent.style.maxHeight) {
+					accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+				}
+			})
+		);
+	});
+}
+
+export function tabsHandler() {
+	const triggers = document.querySelectorAll(".js-tab"),
+		isActiveClass = "is-active";
+	if (!triggers) return;
+	triggers.forEach((trigger, index) => {
+		trigger.addEventListener("click", () => {
+			const parent = trigger.parentElement;
+			parent.querySelector(`.${isActiveClass}`).classList.remove(isActiveClass);
+			trigger.classList.add(isActiveClass);
+
+			triggers.forEach((el, indexZ) => {
+				el.style.zIndex = indexZ <= index ? 5 : "";
+			});
+		});
+	});
+}

@@ -1,9 +1,11 @@
 .btn {
 	cursor: pointer;
-	padding: 8px 24px 5px;
+	padding: 7px 24px 6px;
 	min-height: 44px;
+	width: fit-content;
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	font-family: $family-firs;
 	font-size: rem(20);
 	line-height: 1.1;
@@ -15,6 +17,10 @@
 	border: 1px solid currentColor;
 	user-select: none;
 	transition: all $transition-default;
+
+	@include resp-to(sm) {
+		width: 100%;
+	}
 
 	@include resp-from(lg) {
 		font-size: rem(26);
@@ -38,5 +44,24 @@
 		color: $white;
 		background: $brand-red;
 		border-color: $brand-red;
+	}
+
+	// .btn_red
+	&_red {
+		color: $white;
+		background: $brand-red;
+		border-color: $brand-red;
+
+		@include on-hover {
+			background: $accent-brusnika;
+			border-color: $accent-brusnika;
+		}
+	}
+
+	// .btn_small
+	&_small {
+		padding: 3px 12px 0;
+		min-height: 29px;
+		font-size: rem(14);
 	}
 }

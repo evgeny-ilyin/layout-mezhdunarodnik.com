@@ -38,10 +38,14 @@ h5,
 h6,
 .h6 {
 	font-family: $family-firs;
+	font-weight: 600;
 }
 
 h1,
 .h1 {
+	font-family: $family-hint;
+	font-weight: 700;
+
 	@extend %h1-heading;
 }
 
@@ -72,6 +76,15 @@ h6,
 
 a {
 	@extend %text-links-solid;
+
+	@include when-inside(".container") {
+		--link-decoration-color: #{colorRGB("brand-dark-blue")};
+		--link-decoration-alpha: 0.4;
+	}
+
+	@include when-inside(".footer") {
+		@extend %text-links-footer;
+	}
 }
 
 p {
@@ -150,14 +163,40 @@ ol {
 /**
  * Font sizes
  */
-.small {
-	font-size: 0.85rem !important;
+// .text-sm {
+// 	font-size: rem(14);
+// }
+
+// .text-md {
+// 	font-size: rem(22);
+// }
+
+.text-lg {
+	font-size: rem(26);
+	line-height: 1;
+
+	@include resp-from(md) {
+		font-size: rem(30);
+	}
+
+	@include resp-from(lg) {
+		font-size: rem(36);
+	}
 }
 
-// .fz-13-20 {
-// 	font-size: rem(13) !important;
+/**
+ * Highlighted words
+ */
+i,
+em {
+	font-style: normal;
+	font-weight: 600;
+	color: $white;
+	background: $brand-electric;
+	border-radius: 6px;
+	padding: 0 8px;
 
-// 	@include resp-from(lg) {
-// 		font-size: rem(20) !important;
-// 	}
-// }
+	@include resp-from(xl) {
+		padding-top: 1px;
+	}
+}

@@ -3,90 +3,100 @@
 ///
 %h1-heading {
 	font-size: rem(32);
-	line-height: 1.2;
-	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 10px;
 
-	@include resp-from(md) {
-		font-size: rem(40);
-	}
-
-	@include resp-from(lg) {
-		font-size: rem(64);
+	@include resp-from(xl) {
+		font-size: rem(54);
+		line-height: 1;
+		margin-bottom: 17px;
 	}
 }
 
 %h2-heading {
-	font-size: rem(24);
-	line-height: 1.2;
-	font-weight: 600;
+	font-size: rem(21);
+	line-height: 1.1;
+	margin-bottom: 15px;
 
-	@include resp-from(lg) {
+	@include resp-from(md) {
+		font-size: rem(21);
+	}
+
+	@include resp-from(xl) {
 		font-size: rem(34);
+		margin-bottom: 20px;
 	}
 }
 
 %h3-heading {
-	font-size: rem(20);
-	line-height: 1.2;
-	font-weight: 600;
+	font-size: rem(16);
+	line-height: 1.1;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 
-	@include resp-from(lg) {
-		font-size: rem(24);
+	@include resp-from(xl) {
+		font-size: rem(22);
+		margin-bottom: 17px;
 	}
 }
 
 %h4-heading {
 	font-size: rem(18);
-	line-height: 1.2;
-	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 10px;
 
 	@include resp-from(lg) {
 		font-size: rem(20);
+		margin-bottom: 15px;
 	}
 }
 
 %h5-heading {
 	font-size: rem(16);
-	line-height: 1.2;
-	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 10px;
 
 	@include resp-from(lg) {
 		font-size: rem(18);
+		margin-bottom: 15px;
 	}
 }
 
 %h6-heading {
 	font-size: rem(14);
-	line-height: 1.2;
-	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 10px;
 
 	@include resp-from(lg) {
 		font-size: rem(16);
+		margin-bottom: 15px;
 	}
 }
 
 ///
 /// Basic styles for links
 ///
-%text-links {
-	color: currentColor;
+// %text-links {
+// 	color: currentColor;
 
-	@include on-event {
-		color: currentColor;
-	}
+// 	@include on-event {
+// 		color: currentColor;
+// 	}
 
-	// &:focus-visible {
-	// 	outline: 2px solid $black;
-	// 	border-radius: 4px;
-	// 	transition: none;
-	// }
-}
+// &:focus-visible {
+// 	outline: 2px solid $black;
+// 	border-radius: 4px;
+// 	transition: none;
+// }
+// }
 
 %text-links-solid {
 	position: relative;
 	color: currentColor;
 	text-decoration: underline;
-	text-decoration-color: transparent;
+	// text-decoration-color: transparent;
+	text-decoration-color: rgba(var(--link-decoration-color, #{0, 0, 0}), var(--link-decoration-alpha, 0));
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
 	transition: all $transition-default;
@@ -99,26 +109,31 @@
 		color: currentColor;
 		transition: all $transition-default;
 	}
-
-	// &:focus-visible {
-	// 	outline: 2px solid $black;
-	// 	border-radius: 3px;
-	// 	transition: none;
-	// }
 }
 
-%text-links-dashed {
-	@extend %text-links-solid;
-	text-decoration-style: dashed;
-}
+%text-links-footer {
+	&[href^="tel:"],
+	&[href^="mailto:"] {
+		text-decoration-color: transparent;
 
-%link-classic {
-	text-decoration: underline;
-	text-decoration-color: $gray;
-	text-underline-offset: 1px;
-	transition: all 0.15s ease;
-
-	@include on-hover {
-		text-decoration-color: $black;
+		@include on-hover {
+			text-decoration-color: currentColor;
+		}
 	}
 }
+
+// %text-links-dashed {
+// 	@extend %text-links-solid;
+// 	text-decoration-style: dashed;
+// }
+
+// %link-classic {
+// 	text-decoration: underline;
+// 	text-decoration-color: $gray;
+// 	text-underline-offset: 1px;
+// 	transition: all 0.15s ease;
+
+// 	@include on-hover {
+// 		text-decoration-color: $black;
+// 	}
+// }

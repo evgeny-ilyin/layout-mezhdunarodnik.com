@@ -42,7 +42,7 @@
 
 	// .header__lang
 	&__lang {
-		color: $gray-dark;
+		color: $gray;
 		display: none;
 		flex: 0 0 45px;
 		margin-right: 10px;
@@ -226,7 +226,6 @@
 		background: $white;
 		overflow: hidden;
 		overflow-x: auto;
-		border-bottom: 1px solid $brand-light-gray;
 	}
 }
 
@@ -263,9 +262,9 @@
 		align-items: center;
 		height: 46px;
 
-			@include resp-from(lg) {
-				height: 59px;
-			}
+		@include resp-from(lg) {
+			height: 59px;
+		}
 	}
 }
 

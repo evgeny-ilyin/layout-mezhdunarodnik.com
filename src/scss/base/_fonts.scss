@@ -60,3 +60,13 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: "Hint";
+	src: local("Hint Bold"), local("Hint-Bold"),
+		url("../fonts/Hint-Bold.woff2") format("woff2"),
+		url("../fonts/Hint-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
