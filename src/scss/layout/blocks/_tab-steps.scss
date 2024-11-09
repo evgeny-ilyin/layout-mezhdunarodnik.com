@@ -28,11 +28,12 @@
 
 		@include resp-from(md) {
 			width: 420px;
-			margin-left: -304px;
+			margin-left: -310px;
 		}
 
 		@include resp-from(xl) {
 			padding-left: 27px;
+			margin-left: -304px;
 		}
 
 		@include on-hover {

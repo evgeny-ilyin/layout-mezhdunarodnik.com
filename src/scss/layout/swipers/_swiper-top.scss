@@ -1,7 +1,14 @@
 .swiper-top {
-	
 	.swiper {
-		--swiper-pagination-bottom: 25px;
-		padding-bottom: 0;
+		--swiper-pagination-bottom: 20px;
+		padding-bottom: 25px;
+
+		@include resp-from(md) {
+		}
+
+		@include resp-from(xl) {
+			--swiper-pagination-bottom: 25px;
+			padding-bottom: 0;
+		}
 	}
 }

@@ -5,9 +5,20 @@
 	--swiper-pagination-bullet-inactive-color: #{$gray};
 	--swiper-pagination-bullet-inactive-opacity: 0.7;
 	--swiper-pagination-bullet-border-radius: 0;
-	--swiper-pagination-bullet-width: 27px;
-	--swiper-pagination-bullet-height: 4px;
-	--swiper-pagination-bullet-horizontal-gap: 8px;
+	--swiper-pagination-bullet-width: 17px;
+	--swiper-pagination-bullet-height: 2px;
+	--swiper-pagination-bullet-horizontal-gap: 5px;
+
+	@include resp-from(md) {
+		--swiper-pagination-bullet-width: 19px;
+		--swiper-pagination-bullet-height: 3px;
+	}
+
+	@include resp-from(xl) {
+		--swiper-pagination-bullet-width: 27px;
+		--swiper-pagination-bullet-height: 4px;
+		--swiper-pagination-bullet-horizontal-gap: 8px;
+	}
 
 	.swiper-slide {
 		height: auto;
