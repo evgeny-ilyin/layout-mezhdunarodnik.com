@@ -114,12 +114,12 @@
 }
 
 .mt-auto {
-	margin-top: auto;
+	margin-top: auto !important;
 }
 
 .mx-auto {
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .relative {
