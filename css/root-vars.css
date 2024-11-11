@@ -20,5 +20,8 @@
   --gray: #a8a7a7;
   --gray-dark: #29292e;
   --selection-bgr: #101551;
-  --selection-text: #fff
+  --selection-text: #fff;
+  --svg-arrow-timeline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 22'%3E%3Cpath stroke='%23101551' d='M.73 1.27 10.46 11 .73 20.73'/%3E%3C/svg%3E");
+  --svg-angle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 14'%3E%3Cpath stroke='%23FF3A29' stroke-width='3' d='m21.67 1.84-9.83 9.83L2 1.84'/%3E%3C/svg%3E");
+  --svg-checked: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 10'%3E%3Cpath stroke='%23ff3a29' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.5 3.8 4 4.8 5.2-7.2'/%3E%3C/svg%3E")
 }

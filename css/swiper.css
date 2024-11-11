@@ -566,6 +566,15 @@ button.swiper-pagination-bullet {
 .swiper-simple .swiper {
   overflow: visible
 }
+.swiper-teachers {
+  margin-top: 20px
+}
+.swiper-teachers .swiper {
+  overflow: visible
+}
+.swiper-teachers .swiper-slide {
+  width: 160px
+}
 .swiper-top .swiper {
   --swiper-pagination-bottom: 20px;
   padding-bottom: 25px
@@ -709,7 +718,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-info__content strong {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 120%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -741,6 +750,30 @@ button.swiper-pagination-bullet {
   z-index: -1;
   -o-object-fit: cover;
   object-fit: cover
+}
+.swiper-teachers__link {
+  text-decoration: none
+}
+.swiper-teachers__link img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 25px
+}
+.swiper-teachers__name {
+  min-height: 72px;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  word-break: break-word
+}
+.swiper-teachers__position {
+  font-size: .875rem;
+  line-height: 129%;
+  padding-right: 10px
 }
 @media (min-width:577px) {
   .swiper-characters__content div {
@@ -809,6 +842,9 @@ button.swiper-pagination-bullet {
   .swiper-characters__content strong {
     font-size: 1.25rem
   }
+  .swiper-info__content strong {
+    font-size: 1.375rem
+  }
 }
 @media (min-width:1280px) {
   .swiper {
@@ -820,6 +856,9 @@ button.swiper-pagination-bullet {
     margin-top: 17px
   }
   .swiper-simple .swiper {
+    overflow: hidden
+  }
+  .swiper-teachers .swiper {
     overflow: hidden
   }
   .swiper-top .swiper {
