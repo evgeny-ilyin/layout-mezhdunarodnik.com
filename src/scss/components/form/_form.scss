@@ -5,6 +5,13 @@ fieldset {
 }
 
 .form {
+	--grid-padding: 10px;
+	margin-top: 20px;
+
+	&.row > * {
+		margin: 0;
+	}
+
 	input[type="text"],
 	input[type="email"],
 	input[type="tel"],
@@ -16,23 +23,28 @@ fieldset {
 	}
 
 	textarea {
+		display: block;
+		height: 100%;
 		min-height: 120px;
 		resize: vertical;
 	}
 
 	// .form__fieldset
 	&__fieldset {
-		margin-bottom: 32px;
+		height: 100%;
+		display: flex;
+		// gap: 16px;
 
-		&:last-child {
-			margin-bottom: 16px;
+		&._column {
+			flex-direction: column;
 		}
 	}
 }
 
 .form-item {
 	position: relative;
-	margin-bottom: 12px;
+	flex: 1 1 100%;
+	margin-bottom: 16px;
 
 	// .form-item__header
 	&__header {
@@ -41,6 +53,11 @@ fieldset {
 		@include resp-from(xl) {
 			font-size: rem(22);
 		}
+	}
+
+	.btn {
+		margin-left: -1px;
+		margin-bottom: -1px;
 	}
 }
 

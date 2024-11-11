@@ -1,0 +1,44 @@
+@@include('html/components/head.html', {
+"title": "Выпускникам"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"for-graduates": "is-active"
+	})
+
+	<main class="container">
+		@@include('html/layout/banners/banner-top-graduates.html')
+
+		<div class="content">
+			<div class="block-text row">
+				<div class="offset-left h3">Возможности трудоустройства</div>
+				<div class="offset-left col-md-6">
+					<div class="block-text__head">Мы&nbsp;поддерживаем выпускников факультета в&nbsp;карьерном росте на&nbsp;всём пути обучения и&nbsp;после.</div>
+				</div>
+				<div class="col-md-6">
+					<div class="block-text__buttons">
+						<a href="javascript:void(0)" class="btn">Подробнее о возможностях</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		@@include('html/layout/blocks/career-digest.html')
+		@@include('html/layout/blocks/сontinue-training.html')
+		@@include('html/layout/swipers/swiper-characters.html')
+
+		@@include('html/layout/swipers/swiper-teachers.html')
+		@@include('html/layout/blocks/arrows-line.html')
+		@@include('html/layout/forms/ask-teacher.html')
+
+		<!-- @@include('html/layout/swipers/swiper-success.html') -->
+
+		@@include('html/layout/forms/contact-us.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>

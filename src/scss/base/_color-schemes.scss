@@ -30,6 +30,12 @@
 	--bg-full: #{$brand-electric};
 }
 
+.bg-malahit {
+	color: $white;
+	background: $accent-malahit !important;
+	--bg-full: #{$accent-malahit};
+}
+
 .bg-light-gray {
 	background: $brand-light-gray !important;
 	--bg-full: #{$brand-light-gray};
