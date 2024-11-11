@@ -54,3 +54,19 @@
 		}
 	}
 }
+
+.swiper-teachers {
+	margin-top: 20px;
+
+	.swiper {
+		overflow: visible;
+
+		@include resp-from(xl) {
+			overflow: hidden;
+		}
+	}
+
+	.swiper-slide {
+		width: 160px;
+	}
+}

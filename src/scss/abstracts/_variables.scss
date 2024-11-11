@@ -78,15 +78,16 @@ $hamburger-line: 2px;
 $hamburger-color: $brand-color-primary;
 
 //** SVGs --var
-$svg-fetch-ring: var(--svg-fetch-ring);
+// $svg-fetch-ring: var(--svg-fetch-ring);
 // $svg-arrow-long: var(--svg-arrow-long);
 // $svg-arrow-black: var(--svg-arrow-black);
 // $svg-arrow-white: var(--svg-arrow-white);
-// $svg-angle: var(--svg-angle);
+$svg-arrow-timeline: var(--svg-arrow-timeline);
+$svg-angle: var(--svg-angle);
 // $svg-close: var(--svg-close);
 // $svg-nav-search: var(--svg-nav-search);
 // $svg-geo: var(--svg-geo);
-// $svg-checked: var(--svg-checked);
+$svg-checked: var(--svg-checked);
 // $svg-download: var(--svg-download);
 
 /// Transitions
@@ -115,4 +116,4 @@ $breakpoints: (
 ) !default;
 
 /// Icons base64
-// $menu-arrow-white: "data:image/svg+xml;base64,.....";
+// $arrow-timeline: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 22'%3E%3Cpath stroke='%23101551' d='M.73 1.27 10.46 11 .73 20.73'/%3E%3C/svg%3E";

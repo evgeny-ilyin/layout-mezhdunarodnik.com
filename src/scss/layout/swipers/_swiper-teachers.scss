@@ -1,0 +1,31 @@
+.swiper-teachers {
+	// .swiper-teachers__link
+	&__link {
+		text-decoration: none;
+
+		img {
+			width: 160px;
+			height: 160px;
+			object-fit: cover;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .swiper-teachers__name
+	&__name {
+		min-height: 72px;
+		font-size: rem(19);
+		font-weight: 600;
+		line-height: 120%;
+		margin-bottom: 15px;
+		padding-right: 10px;
+		word-break: break-word;
+	}
+
+	// .swiper-teachers__position
+	&__position {
+		font-size: rem(14);
+		line-height: 129%;
+		padding-right: 10px;
+	}
+}

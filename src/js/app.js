@@ -1,5 +1,6 @@
 import * as fn from "./modules/functions.js";
 import * as sw from "./modules/swiper.js";
+import * as sl from "./modules/form-custom-select.js";
 // import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
 
 addEventListener("DOMContentLoaded", () => {
@@ -9,7 +10,9 @@ addEventListener("DOMContentLoaded", () => {
 	fn.scrollHorisontallyByWheel();
 	fn.accordion();
 	fn.tabsHandler();
-	
+
+	sl.selectsInit();
+
 	// sw.swiperResortsHandler();
 	// sw.swiperQuotesHandler();
 	// sw.swiperPressHandler();

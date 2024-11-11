@@ -41,6 +41,12 @@
 		}
 	}
 
+	&_type-6 {
+		svg {
+			filter: drop-shadow(0 0 #357b7b);
+		}
+	}
+
 	&_left {
 		@include resp-from(md) {
 			align-items: flex-start;

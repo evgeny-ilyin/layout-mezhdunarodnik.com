@@ -12,18 +12,60 @@
 		margin-bottom: 16px;
 
 		&:last-child {
+			// &:not(.block-text__buttons) {
 			margin-bottom: 0;
+			// }
+		}
+	}
+
+	h1,
+	.h1 {
+		@include resp-from(md) {
+			margin-bottom: 30px;
+		}
+
+		@include resp-from(xl) {
+			margin-bottom: 40px;
+		}
+	}
+
+	h2,
+	.h2 {
+		@include resp-from(md) {
+			margin-bottom: 25px;
+		}
+
+		@include resp-from(xl) {
+			margin-bottom: 35px;
+		}
+	}
+
+	h3,
+	.h3 {
+		@include resp-from(md) {
+			margin-bottom: 20px;
+		}
+
+		@include resp-from(xl) {
+			margin-bottom: 30px;
 		}
 	}
 
 	// .block-text__head
 	&__head {
+		font-size: rem(21);
+		line-height: 1.1;
 		font-weight: 600;
-		@extend %h2-heading;
-		// font-size: rem(21);
-		// font-size: clamp(rem(21), 2vw, rem(34));
-		// line-height: 1.1;
-		// font-weight: 700;
+		// margin-bottom: 16px;
+
+		@include resp-from(md) {
+			margin-bottom: 25px !important;
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(34);
+			margin-bottom: 35px !important;
+		}
 	}
 
 	// .block-text__sub
@@ -45,7 +87,7 @@
 	// .block-text__body
 	&__body {
 		font-size: rem(16);
-		line-height: 1.1;
+		line-height: 1.4;
 		margin-bottom: 32px !important;
 
 		@include resp-from(xl) {
@@ -54,9 +96,23 @@
 			margin-bottom: 45px !important;
 		}
 
-		.flex-row,
 		.row {
 			--grid-padding: 10px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			margin: 40px 0 0;
+			text-transform: uppercase;
+			font-size: rem(17);
+			font-weight: 700;
+			line-height: 1.2;
+			letter-spacing: 0.04em;
+
+			li {
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -69,6 +125,10 @@
 		@include resp-from(xl) {
 			--grid-multiplier: 0.25;
 			padding-left: 75px;
+
+			@include when-inside(".order-md-last") {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -112,6 +172,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
+		margin-top: 16px;
+
+		// @include resp-from(md) {
+		// 	&:first-child {
+		// 		margin-top: 0;
+		// 	}
+		// }
 	}
 
 	// .block-text__banner-wrapper
@@ -152,7 +219,6 @@
 
 		@include resp-from(md) {
 			font-size: rem(32);
-			text-indent: -50%;
 		}
 
 		@include resp-from(lg) {
@@ -161,6 +227,12 @@
 
 		@include resp-from(xl) {
 			font-size: rem(50);
+		}
+
+		&.text-indent-md {
+			@include resp-from(md) {
+				text-indent: -50%;
+			}
 		}
 	}
 
@@ -172,7 +244,6 @@
 
 		@include resp-from(md) {
 			font-size: rem(19);
-			order: -1;
 		}
 
 		@include resp-from(lg) {
@@ -181,6 +252,7 @@
 
 		@include resp-from(xl) {
 			font-size: rem(30);
+			max-width: 550px;
 		}
 	}
 
@@ -209,4 +281,60 @@
 	// 		font-weight: 500;
 	// 	}
 	// }
+}
+
+.benefits {
+	font-family: $family-firs;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	// .benefits__item
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1;
+		text-transform: uppercase;
+		max-width: 450px;
+
+		@include resp-from(md) {
+			font-size: rem(20);
+			max-width: 500px;
+		}
+
+		div {
+			flex: 0 0 130px;
+			align-self: normal;
+			font-size: rem(57);
+			font-weight: 600;
+			line-height: 1;
+			letter-spacing: -0.03em;
+			color: $brand-red;
+
+			@include resp-from(md) {
+				font-size: rem(54);
+			}
+
+			@include resp-from(xl) {
+				flex: 0 0 180px;
+				font-size: rem(80);
+			}
+		}
+
+		sup {
+			font-size: rem(20);
+			top: -25px;
+
+			@include resp-from(md) {
+				font-size: rem(19);
+			}
+
+			@include resp-from(xl) {
+				font-size: rem(28);
+				top: -40px;
+			}
+		}
+	}
 }

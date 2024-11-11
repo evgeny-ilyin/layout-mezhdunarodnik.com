@@ -2,7 +2,10 @@
 	--content-max-width: #{$max-width};
 	--space-md: 0px;
 	--space: 8px;
-	margin: 0 0 32px;
+	--line-top: 59px;
+	box-sizing: content-box;
+	margin: 0;
+	padding: 8px 0 32px;
 	min-height: 250px;
 	display: grid;
 	grid-template-columns:
@@ -12,6 +15,19 @@
 		[content-end]
 		1fr [full-end];
 
+	&::after {
+		content: "";
+		height: 1px;
+		background: $brand-color-primary;
+		top: var(--line-top);
+	}
+
+	&::after {
+		position: relative;
+		align-self: stretch;
+		padding-inline-end: max(var(--space), (100vw - var(--content-max-width)) / 2 - var(--space));
+	}
+
 	// .timeline__wrapper
 	&__wrapper {
 		--grid-padding: #{$min-padding};
@@ -20,7 +36,7 @@
 		grid-template-columns: inherit;
 		padding-left: calc(var(--grid-padding) + var(--offset-left, 0px));
 		position: relative;
-		
+
 		@include resp-from(xl) {
 			--offset-left: #{$offset-left};
 			--grid-padding: #{$max-padding};
@@ -39,7 +55,7 @@
 			width: 100%;
 			height: 1px;
 			background: $brand-color-primary;
-			top: 59px;
+			top: var(--line-top);
 		}
 
 		&::before {
@@ -51,6 +67,66 @@
 			position: relative;
 			align-self: stretch;
 			padding-inline-end: max(var(--space), (100vw - var(--content-max-width)) / 2 - var(--space));
+		}
+	}
+
+	// .timeline_steps
+	&_steps {
+		--line-top: 75px;
+
+		.timeline__list {
+			&::before {
+				display: none;
+			}
+		}
+
+		.t-item {
+			flex: 0 0 250px;
+
+			&:first-child {
+				.t-item__step {
+					&::before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						z-index: 1;
+						width: 1px;
+						height: 11px;
+						background: $brand-color-primary;
+					}
+				}
+			}
+
+			// .t-item__step
+			&__step {
+				color: $brand-red;
+				margin-bottom: 7px;
+				position: relative;
+
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					right: 0;
+					bottom: -9px;
+					z-index: 1;
+					width: 16px;
+					height: 28px;
+					background: var(--bg-full, #fff) $svg-arrow-timeline center / 11px 20px no-repeat;
+				}
+			}
+
+			// .t-item__header
+			&__header {
+				font-weight: 700;
+			}
+
+			// .t-item__body
+			&__body {
+				max-width: 200px;
+			}
 		}
 	}
 }
@@ -70,18 +146,31 @@
 		width: 100%;
 		height: 1px;
 		background: $brand-color-primary;
-		top: 59px;
+		top: var(--line-top);
 		position: absolute;
 	}
 
-	// .t-item__year
-	&__year {
+	// .t-item__step
+	&__step {
 		color: $brand-electric;
 		font-family: $family-firs;
 		font-size: rem(50);
 		font-weight: 600;
 		line-height: 1.3;
 		margin-bottom: 2px;
+
+		span {
+			font-family: $family-hint;
+			font-size: rem(28);
+			line-height: 1;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&:first-of-type {
+				font-family: $family-firs;
+				font-size: rem(80);
+			}
+		}
 	}
 
 	// .t-item__header
@@ -95,6 +184,6 @@
 	// .t-item__body
 	&__body {
 		font-size: rem(14);
-		line-height: 1.1;
+		line-height: 1.3;
 	}
 }

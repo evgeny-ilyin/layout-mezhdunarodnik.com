@@ -271,8 +271,27 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // }
 
 export function swipersInit() {
-	const swiperSimple = document.querySelectorAll(".swiper-simple");
+	const swiperTop = document.querySelectorAll(".swiper-top");
+	swiperTop.forEach((el) => {
+		let swiper = el.querySelector(".swiper"),
+			pagination = el.querySelector(".swiper-pagination");
 
+		new Swiper(swiper, {
+			modules: [Pagination],
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 20,
+			loop: true,
+			pagination: {
+				enabled: true,
+				el: pagination,
+				type: "bullets",
+				clickable: true,
+			},
+		});
+	});
+
+	const swiperSimple = document.querySelectorAll(".swiper-simple");
 	swiperSimple.forEach((el) => {
 		let swiper = el.querySelector(".swiper"),
 			pagination = el.querySelector(".swiper-pagination");
@@ -318,23 +337,44 @@ export function swipersInit() {
 		});
 	});
 
-	const swiperTop = document.querySelectorAll(".swiper-top");
-
-	swiperTop.forEach((el) => {
+	const swiperTeachers = document.querySelectorAll(".swiper-teachers");
+	swiperTeachers.forEach((el) => {
 		let swiper = el.querySelector(".swiper"),
 			pagination = el.querySelector(".swiper-pagination");
 
 		new Swiper(swiper, {
 			modules: [Pagination],
-			slidesPerView: 1,
+			slidesPerView: "auto",
 			slidesPerGroup: 1,
-			spaceBetween: 20,
-			loop: true,
+			spaceBetween: 35,
+			loop: false,
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
 			pagination: {
-				enabled: true,
+				enabled: false,
 				el: pagination,
 				type: "bullets",
 				clickable: true,
+			},
+			breakpoints: {
+				768: {
+					pagination: {
+						enabled: false,
+					},
+				},
+				1024: {
+					centeredSlides: false,
+					pagination: {
+						enabled: false,
+					},
+				},
+				1280: {
+					slidesPerGroup: 3,
+					centeredSlides: false,
+					pagination: {
+						enabled: true,
+					},
+				},
 			},
 		});
 	});

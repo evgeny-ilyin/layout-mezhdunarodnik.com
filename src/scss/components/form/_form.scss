@@ -1,0 +1,126 @@
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.form {
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		&::placeholder {
+			color: $placeholder-color;
+		}
+	}
+
+	textarea {
+		min-height: 120px;
+		resize: vertical;
+	}
+
+	// .form__fieldset
+	&__fieldset {
+		margin-bottom: 32px;
+
+		&:last-child {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.form-item {
+	position: relative;
+	margin-bottom: 12px;
+
+	// .form-item__header
+	&__header {
+		font-size: rem(20);
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+		}
+	}
+}
+
+// .form-item-flex {
+// 	display: flex;
+// 	flex-direction: column;
+
+// 	input[type="text"] {
+// 		margin: 0 0 8px;
+// 	}
+
+// 	.btn {
+// 		width: 100%;
+// 	}
+
+// 	@include resp-from(lg) {
+// 		flex-direction: row;
+// 		justify-content: space-between;
+
+// 		input[type="text"] {
+// 			width: auto;
+// 			flex: 1;
+// 			margin: 0 8px 0 0;
+// 		}
+
+// 		.btn {
+// 			width: auto;
+// 		}
+// 	}
+// }
+
+// .form-items-row {
+// 	display: grid;
+// 	grid-auto-flow: column;
+// 	gap: 12px;
+// }
+
+// default textarea, input (white)
+.textarea,
+.input {
+	outline: none;
+	position: relative;
+	background-color: $white;
+	border: 0;
+	box-shadow: 0 0 0 1px $black;
+	font-size: rem(18);
+	padding: 12px;
+	height: 40px;
+	transition: box-shadow $transition-default, border-radius $transition-default, background-color $transition-default;
+
+	@include on-hover {
+		background: $brand-light-gray;
+		box-shadow: 0 0 0 1px $brand-dark-blue;
+	}
+
+	@include on-focus-visible {
+		background: $white;
+		box-shadow: 0 0 0 1px $brand-dark-blue;
+	}
+
+	&.is-error {
+		color: $red;
+		box-shadow: 0 0 0 2px $red;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+		background-color: $white;
+		box-shadow: 0 0 0 1px $gray;
+	}
+
+	// .textarea_fill
+	// .input_fill
+	&_fill {
+		width: 100%;
+	}
+}
+
+// @import "form-labels";
+// @import "form-checkboxes";
+@import "form-selects";
+// @import "form-upload";

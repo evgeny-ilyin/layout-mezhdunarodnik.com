@@ -21,10 +21,13 @@
 
 .bg-light-blue {
 	background: $accent-svetlo-goluboy !important;
+	--bg-full: #{$accent-svetlo-goluboy};
 }
 
 .bg-electric {
+	color: $white;
 	background: $brand-electric !important;
+	--bg-full: #{$brand-electric};
 }
 
 .bg-light-gray {

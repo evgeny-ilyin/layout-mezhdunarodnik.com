@@ -47,6 +47,7 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
+		"lc-select": "^1.1.8",
 		"swiper": "11.1.14"
 	}
 }
