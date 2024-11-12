@@ -38,6 +38,10 @@ fieldset {
 
 		&._column {
 			flex-direction: column;
+
+			.form-item {
+				flex: 0 0 auto;
+			}
 		}
 	}
 }
