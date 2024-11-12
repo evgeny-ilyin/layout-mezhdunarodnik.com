@@ -378,4 +378,23 @@ export function swipersInit() {
 			},
 		});
 	});
+
+	const swiperQuotes = document.querySelectorAll(".swiper-quotes");
+	swiperQuotes.forEach((el) => {
+		let swiper = el.querySelector(".swiper"),
+			next = el.querySelector(".swiper-button-next"),
+			prev = el.querySelector(".swiper-button-prev");
+
+		new Swiper(swiper, {
+			modules: [Navigation],
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 20,
+			loop: true,
+			navigation: {
+				nextEl: next,
+				prevEl: prev,
+			},
+		});
+	});
 }

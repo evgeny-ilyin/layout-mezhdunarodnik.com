@@ -1,0 +1,93 @@
+.swiper-quotes {
+	max-width: 432px;
+	margin: 0 auto;
+
+	@include resp-from(md) {
+		margin: 0;
+	}
+
+	.swiper {
+		--swiper-navigation-size: 22px;
+		--swiper-navigation-sides-offset: 12px;
+		--swiper-navigation-color: #{$gray-dark};
+		padding-bottom: 0;
+
+		@include resp-from(xl) {
+			--swiper-navigation-sides-offset: 18px;
+		}
+	}
+
+	.swiper-slide {
+		display: flex;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: auto;
+		bottom: 26px;
+	}
+}
+
+.quote {
+	background: $white;
+	padding: 23px 31px 56px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	@include resp-from(xl) {
+		padding: 31px 43px 56px;
+		gap: 45px;
+	}
+
+	// .quote__row
+	&__row {
+		display: flex;
+		gap: 25px;
+		// margin-bottom: 29px;
+	}
+
+	// .quote__photo
+	&__photo {
+		flex: 0 0 85px;
+
+		@include resp-from(lg) {
+			flex: 0 0 114px;
+		}
+	}
+
+	// .quote__person
+	&__person {
+		font-size: rem(15);
+		font-weight: 400;
+		line-height: 129%;
+
+		@include resp-from(md) {
+			font-size: rem(14);
+		}
+	}
+
+	// .quote__name
+	&__name {
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	// .quote__position
+	&__position {
+		max-width: 165px;
+		font-size: rem(14);
+		line-height: 1.2;
+	}
+
+	// .quote__body
+	&__body {
+		font-size: rem(16);
+		line-height: 112%;
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+			line-height: 127%;
+		}
+	}
+}
