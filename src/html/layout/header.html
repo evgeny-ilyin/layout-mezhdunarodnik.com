@@ -76,8 +76,12 @@
 	<div class="header__nav hide-scroll">
 		<div class="content">
 			@@include('nav.html', {
-				"for-applicants": "@@for-applicants",
-				"for-graduates": "@@for-graduates",
+			"for-applicants": "@@for-applicants",
+			"for-students": "@@for-students",
+			"for-graduates": "@@for-graduates",
+			"for-teachers": "@@for-teachers",
+			"for-partners": "@@for-partners",
+			"for-press": "@@for-press",
 			})
 		</div>
 	</div>
@@ -87,11 +91,11 @@
 			<div class="header-subnav__list">
 				<nav class="nav-sub" role="navigation">
 					<a href="for-applicants.html" class="@@for-applicants">Абитуриентам</a>
-					<a href="javascript:void(0)" class="">Студентам</a>
+					<a href="for-students.html" class="@@for-students">Студентам</a>
 					<a href="for-graduates.html" class="@@for-graduates">Выпускникам</a>
-					<a href="javascript:void(0)" class="">Преподавателям</a>
-					<a href="javascript:void(0)" class="">Партнёрам</a>
-					<a href="javascript:void(0)" class="">СМИ</a>
+					<a href="for-teachers.html" class="@@for-teachers">Преподавателям</a>
+					<a href="for-partners.html" class="@@for-partners">Партнёрам</a>
+					<a href="for-press.html" class="@@for-press">СМИ</a>
 				</nav>
 			</div>
 		</div>

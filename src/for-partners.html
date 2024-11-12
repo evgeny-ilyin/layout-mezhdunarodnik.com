@@ -1,0 +1,23 @@
+@@include('html/components/head.html', {
+"title": "Партнёрам"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"for-partners": "is-active"
+	})
+
+	<main class="container">
+		@@include('html/layout/banners/banner-top-partners.html')
+		@@include('html/layout/blocks/about-fmo.html')
+		<hr>
+		@@include('html/layout/blocks/cooperation-formats.html')
+		@@include('html/layout/forms/contact-us.html', {"title": "", "body": "Запрос на стажировку"})
+		<hr>
+		@@include('html/layout/blocks/become-a-partner.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>

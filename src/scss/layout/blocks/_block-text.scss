@@ -125,6 +125,7 @@
 		--grid-multiplier: 0.5;
 		position: relative;
 		margin-top: calc((var(--inner-top-padding) + var(--grid-padding) * var(--grid-multiplier)) * -1);
+		margin-bottom: 40px !important;
 
 		@include resp-from(xl) {
 			--grid-multiplier: 0.25;
@@ -133,6 +134,10 @@
 			@include when-inside(".order-md-last") {
 				padding-left: 0;
 			}
+		}
+
+		@include when-inside('.banner-top') {
+			margin-bottom: 0 !important;
 		}
 	}
 
