@@ -1,0 +1,104 @@
+.contacts {
+	padding: 25px 0 15px;
+
+	@include resp-from(md) {
+		padding: 27px 0;
+	}
+
+	@include resp-from(xl) {
+		padding: 66px 0 54px;
+	}
+
+	// .contacts__wrapper
+	&__wrapper {
+		display: grid;
+		gap: 36px 50px;
+		margin-top: 32px;
+
+		@include resp-from(md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include resp-from(xl) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	// .contacts__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 25px;
+		font-size: rem(16);
+		border-bottom: 1px solid $brand-color-primary;
+
+		@include resp-from(md) {
+			&:nth-last-child(2) {
+				border-bottom: 0;
+			}
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(14);
+			padding-right: 40px;
+			padding-bottom: 0;
+			border-right: 1px solid $brand-color-primary;
+			border-bottom: 0;
+		}
+
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	// .contacts__header
+	&__header {
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 127%;
+		margin-bottom: 5px;
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+		}
+	}
+
+	// .contacts__body
+	&__body {
+		a {
+			display: block;
+			width: fit-content;
+			text-decoration-color: transparent;
+			margin-bottom: 3px;
+
+			@include on-hover {
+				text-decoration-color: currentColor;
+			}
+
+			&[href^="tel:"] {
+				font-size: rem(16);
+				font-weight: 600;
+				line-height: 1;
+				letter-spacing: 0.01em;
+				margin-bottom: 10px;
+				white-space: nowrap;
+
+				@include resp-from(xl) {
+					font-size: rem(21);
+				}
+			}
+		}
+	}
+
+	// .contacts__social
+	&__social {
+		display: flex;
+		gap: 17px;
+		padding-top: 16px;
+		margin-top: auto;
+
+		@include resp-from(xl) {
+			gap: 22px;
+		}
+	}
+}

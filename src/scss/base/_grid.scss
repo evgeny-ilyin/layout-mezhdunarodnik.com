@@ -68,7 +68,7 @@
 
 .offset-left {
 	@include resp-from(xl) {
-		padding-left: calc(var(--grid-padding) + #{$offset-left});
+		padding-left: calc(var(--grid-padding) + #{$offset-left}) !important;
 	}
 }
 

@@ -1,0 +1,21 @@
+.social-link {
+	display: block;
+	width: 32px;
+	height: 32px;
+	fill: $accent-siniy;
+
+	svg {
+		width: 100%;
+		height: 100%;
+
+	}
+
+	@include resp-from(xl) {
+		width: 42px;
+		height: 42px;
+	}
+
+	@include on-hover {
+		fill: $brand-electric;
+	}
+}

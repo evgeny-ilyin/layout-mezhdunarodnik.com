@@ -1,0 +1,26 @@
+@@include('html/components/head.html', {
+"title": "СМИ"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"for-press": "is-active"
+	})
+
+	<main class="container">
+		@@include('html/layout/banners/banner-top-press.html')
+		@@include('html/layout/blocks/about-fmo.html')
+		@@include('html/layout/blocks/contacts.html')
+		@@include('html/layout/forms/contact-us.html', {"title": "", "body": "Форма обратной связи"})
+		<hr>
+		@@include('html/layout/swipers/swiper-news.html', {"title": "Архив публикаций"})
+		<hr>
+		<!-- @@include('html/layout/swipers/swiper-news.html', {"title": "Фотоархив"}) -->
+		@@include('html/layout/blocks/arrows-line.html')
+
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>

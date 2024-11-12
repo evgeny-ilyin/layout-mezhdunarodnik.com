@@ -40,10 +40,12 @@
 }
 
 .swiper-simple {
-	margin-top: 11px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
 	@include resp-from(xl) {
-		margin-top: 17px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 
 	.swiper {
