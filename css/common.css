@@ -1681,6 +1681,11 @@ fieldset {
   -ms-flex-direction: column;
   flex-direction: column
 }
+.form__fieldset._column .form-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
 .form-item {
   position: relative;
   -webkit-box-flex: 1;
