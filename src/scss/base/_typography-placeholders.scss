@@ -133,10 +133,6 @@
 		color: currentColor;
 		transition: all $transition-default;
 	}
-
-	svg {
-		transition: none;
-	}
 }
 
 %text-links-footer {
