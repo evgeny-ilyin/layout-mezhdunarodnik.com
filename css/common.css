@@ -373,11 +373,19 @@ h1 {
   line-height: 1.1;
   margin-bottom: 10px
 }
+.h1:empty,
+h1:empty {
+  display: none
+}
 .h2,
 h2 {
   font-size: 1.3125rem;
   line-height: 1.1;
   margin-bottom: 15px
+}
+.h2:empty,
+h2:empty {
+  display: none
 }
 .h3,
 h3 {
@@ -387,11 +395,19 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 10px
 }
+.h3:empty,
+h3:empty {
+  display: none
+}
 .h4,
 h4 {
   font-size: 1.125rem;
   line-height: 1.1;
   margin-bottom: 10px
+}
+.h4:empty,
+h4:empty {
+  display: none
 }
 .h5,
 h5 {
@@ -399,11 +415,19 @@ h5 {
   line-height: 1.1;
   margin-bottom: 10px
 }
+.h5:empty,
+h5:empty {
+  display: none
+}
 .h6,
 h6 {
   font-size: .875rem;
   line-height: 1.1;
   margin-bottom: 10px
+}
+.h6:empty,
+h6:empty {
+  display: none
 }
 a {
   position: relative;
@@ -640,10 +664,10 @@ i {
   z-index: 1
 }
 .mb40 {
-  margin-bottom: 40px
+  margin-bottom: 40px!important
 }
 .mt40 {
-  margin-top: 40px
+  margin-top: 40px!important
 }
 .bg-white {
   background: var(--white)!important;
@@ -659,6 +683,11 @@ i {
 .bg-red .btn:hover {
   border-color: var(--accent-brusnika)
 }
+.bg-blue {
+  color: var(--white);
+  background: var(--accent-siniy)!important;
+  --bg-full: var(--accent-siniy)
+}
 .bg-light-blue {
   background: var(--accent-svetlo-goluboy)!important;
   --bg-full: var(--accent-svetlo-goluboy)
@@ -667,6 +696,11 @@ i {
   color: var(--white);
   background: var(--brand-electric)!important;
   --bg-full: var(--brand-electric)
+}
+.bg-malahit {
+  color: var(--white);
+  background: var(--accent-malahit)!important;
+  --bg-full: var(--accent-malahit)
 }
 .bg-light-gray {
   background: var(--brand-light-gray)!important;
@@ -742,10 +776,17 @@ img::selection {
 .block-text__body ul li {
   margin-bottom: 15px
 }
+.block-text__body:last-child {
+  margin-bottom: 0!important
+}
 .block-text__decor {
   --grid-multiplier: 0.5;
   position: relative;
-  margin-top: calc((var(--inner-top-padding) + var(--grid-padding) * var(--grid-multiplier)) * -1)
+  margin-top: calc((var(--inner-top-padding) + var(--grid-padding) * var(--grid-multiplier)) * -1);
+  margin-bottom: 40px!important
+}
+.banner-top .block-text__decor {
+  margin-bottom: 0!important
 }
 .block-text__decor-img {
   margin-bottom: 16px
@@ -855,7 +896,7 @@ img::selection {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0;
-  padding: 8px 0 32px;
+  padding: 32px 0;
   min-height: 250px;
   display: -ms-grid;
   display: grid;
@@ -1233,6 +1274,9 @@ img::selection {
 .frame_accent-red {
   background: var(--brand-red)
 }
+.frame_accent-smaragd {
+  background: var(--accent-smaragd)
+}
 .frame_shape-1 {
   clip-path: polygon(0 50%,15% 0,85% 0,100% 50%,85% 100%,15% 100%);
   padding: 18px 30px
@@ -1247,6 +1291,16 @@ img::selection {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   padding: 10px
+}
+.frame_shape-4 {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 262 67'%3E%3Cpath d='M261 0H0a33.78 33.78 0 0 0 8.5 22.52c2.7 2.99 4.2 6.91 4.2 10.98s-1.5 7.99-4.2 10.98A33.78 33.78 0 0 0 0 67h261.04a33.78 33.78 0 0 0-8.5-22.52c-2.7-2.99-4.2-6.91-4.2-10.98s1.5-7.99 4.2-10.98A33.78 33.78 0 0 0 261 0Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 262 67'%3E%3Cpath d='M261 0H0a33.78 33.78 0 0 0 8.5 22.52c2.7 2.99 4.2 6.91 4.2 10.98s-1.5 7.99-4.2 10.98A33.78 33.78 0 0 0 0 67h261.04a33.78 33.78 0 0 0-8.5-22.52c-2.7-2.99-4.2-6.91-4.2-10.98s1.5-7.99 4.2-10.98A33.78 33.78 0 0 0 261 0Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  max-width: 271px;
+  padding: 13px 40px 12px 30px
 }
 .swiper .frame {
   -webkit-transform: translateY(-40%);
@@ -1267,7 +1321,7 @@ img::selection {
 .block-text__decor .frame_shape-3 {
   width: 210px;
   height: 89px;
-  padding: 10px 10px 10px 16px
+  padding: 10px 10px 10px 18px
 }
 .btn {
   cursor: pointer;
@@ -1315,96 +1369,6 @@ img::selection {
   padding: 3px 12px 0;
   min-height: 29px;
   font-size: .875rem!important
-}
-.form {
-  margin-top: 40px
-}
-.form input[type=email]::-webkit-input-placeholder,
-.form input[type=text]::-webkit-input-placeholder,
-.form select::-webkit-input-placeholder,
-.form textarea::-webkit-input-placeholder {
-  color: var(--gray)
-}
-.form input[type=email]::-moz-placeholder,
-.form input[type=text]::-moz-placeholder,
-.form select::-moz-placeholder,
-.form textarea::-moz-placeholder {
-  color: var(--gray)
-}
-.form input[type=email]:-ms-input-placeholder,
-.form input[type=text]:-ms-input-placeholder,
-.form select:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder {
-  color: var(--gray)
-}
-.form input[type=email]::-ms-input-placeholder,
-.form input[type=text]::-ms-input-placeholder,
-.form select::-ms-input-placeholder,
-.form textarea::-ms-input-placeholder {
-  color: var(--gray)
-}
-.form input[type=email]::placeholder,
-.form input[type=text]::placeholder,
-.form select::placeholder,
-.form textarea::placeholder {
-  color: var(--gray)
-}
-.form textarea {
-  resize: vertical
-}
-.required {
-  border-color: var(--brand-red)!important
-}
-:root {
-  --form-control-color: var(--brand-dark-blue);
-  --form-control-disabled-bd: var(--gray);
-  --form-control-disabled-bg: gray
-}
-input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: var(--white);
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 22px;
-  height: 22px;
-  border: 1px solid currentColor;
-  display: -ms-grid;
-  display: grid;
-  place-content: center
-}
-input[type=checkbox]::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-color: var(--white);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition: 120ms -webkit-transform ease-in-out;
-  transition: 120ms -webkit-transform ease-in-out;
-  transition: 120ms transform ease-in-out;
-  transition: 120ms transform ease-in-out,120ms -webkit-transform ease-in-out
-}
-input[type=checkbox]:checked::before {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  background-color: var(--form-control-color);
-  border-color: transparent;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  clip-path: polygon(28% 38%,41% 53%,75% 24%,86% 38%,40% 78%,15% 50%)
-}
-input[type=checkbox]:disabled {
-  color: var(--form-control-disabled-bd);
-  cursor: not-allowed;
-  background-color: var(--form-control-disabled-bg)
 }
 .accordion {
   border-bottom: 1px solid var(--brand-dark-blue)
@@ -1656,6 +1620,14 @@ fieldset {
   margin: 0;
   border: none
 }
+.form {
+  --grid-padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+.form.row > * {
+  margin: 0
+}
 .form input[type=email]::-webkit-input-placeholder,
 .form input[type=tel]::-webkit-input-placeholder,
 .form input[type=text]::-webkit-input-placeholder,
@@ -1692,21 +1664,36 @@ fieldset {
   color: var(--gray)
 }
 .form textarea {
+  display: block;
+  height: 100%;
   min-height: 120px;
   resize: vertical
 }
 .form__fieldset {
-  margin-bottom: 32px
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }
-.form__fieldset:last-child {
-  margin-bottom: 16px
+.form__fieldset._column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 .form-item {
   position: relative;
-  margin-bottom: 12px
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-bottom: 16px
 }
 .form-item__header {
   font-size: 1.25rem
+}
+.form-item .btn {
+  margin-left: -1px;
+  margin-bottom: -1px
 }
 .input,
 .textarea {
@@ -1885,6 +1872,18 @@ fieldset {
     -ms-flex-order: -1;
     order: -1
   }
+  .col-md-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%
+  }
+  .col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%
+  }
   .col-md-4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -2051,6 +2050,12 @@ fieldset {
   }
 }
 @media (min-width:1024px) {
+  .col-lg-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%
+  }
   .col-lg-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
