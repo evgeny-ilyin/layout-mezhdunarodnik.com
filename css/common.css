@@ -1159,6 +1159,63 @@ img::selection {
   -o-object-fit: cover;
   object-fit: cover
 }
+.contacts {
+  padding: 25px 0 15px
+}
+.contacts__wrapper {
+  display: -ms-grid;
+  display: grid;
+  gap: 36px 50px;
+  margin-top: 32px
+}
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 25px;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--brand-dark-blue)
+}
+.contacts__item:last-child {
+  border: 0
+}
+.contacts__header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 127%;
+  margin-bottom: 5px
+}
+.contacts__body a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration-color: transparent;
+  margin-bottom: 3px
+}
+.contacts__body a:hover {
+  text-decoration-color: currentColor
+}
+.contacts__body a[href^="tel:"] {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .01em;
+  margin-bottom: 10px;
+  white-space: nowrap
+}
+.contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 17px;
+  padding-top: 16px;
+  margin-top: auto
+}
 .banner-top .block-text__decor .character {
   bottom: -50px
 }
@@ -1369,6 +1426,19 @@ img::selection {
   padding: 3px 12px 0;
   min-height: 29px;
   font-size: .875rem!important
+}
+.social-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: var(--accent-siniy)
+}
+.social-link svg {
+  width: 100%;
+  height: 100%
+}
+.social-link:hover svg {
+  fill: var(--brand-red)
 }
 .accordion {
   border-bottom: 1px solid var(--brand-dark-blue)
@@ -2015,6 +2085,16 @@ fieldset {
     width: 420px;
     margin-left: -310px
   }
+  .contacts {
+    padding: 27px 0
+  }
+  .contacts__wrapper {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2,1fr)
+  }
+  .contacts__item:nth-last-child(2) {
+    border-bottom: 0
+  }
   .banner-top .block-text__decor .character {
     bottom: 15px
   }
@@ -2131,7 +2211,7 @@ fieldset {
     margin: calc(var(--grid-padding) * .25) 0
   }
   .offset-left {
-    padding-left: calc(var(--grid-padding) + 75px)
+    padding-left: calc(var(--grid-padding) + 75px)!important
   }
   .col-xl-9 {
     -webkit-box-flex: 0;
@@ -2230,6 +2310,29 @@ fieldset {
   .tab-steps__body {
     font-size: 1.375rem
   }
+  .contacts {
+    padding: 66px 0 54px
+  }
+  .contacts__wrapper {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4,1fr)
+  }
+  .contacts__item {
+    font-size: .875rem;
+    padding-right: 40px;
+    padding-bottom: 0;
+    border-right: 1px solid var(--brand-dark-blue);
+    border-bottom: 0
+  }
+  .contacts__header {
+    font-size: 1.375rem
+  }
+  .contacts__body a[href^="tel:"] {
+    font-size: 1.3125rem
+  }
+  .contacts__social {
+    gap: 22px
+  }
   .block-text__decor .character_type-1 svg {
     width: 175px;
     height: 187px
@@ -2240,6 +2343,10 @@ fieldset {
   }
   .frame {
     font-size: 1.25rem
+  }
+  .social-link {
+    width: 42px;
+    height: 42px
   }
   .accordion__header > div div {
     font-size: .875rem
