@@ -1230,8 +1230,8 @@ img::selection {
   margin-bottom: -50px
 }
 .order-md-last .character {
-  left: auto;
-  right: 0
+  left: auto!important;
+  right: 0!important
 }
 .frame {
   font-family: Hint,Roboto,Helvetica,"Open Sans",Arial,sans-serif;
