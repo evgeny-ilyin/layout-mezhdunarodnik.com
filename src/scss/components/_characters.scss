@@ -112,8 +112,8 @@
 	}
 
 	@include when-inside(".order-md-last") {
-		left: auto;
-		right: 0;
+		left: auto !important;
+		right: 0 !important;
 	}
 }
 
