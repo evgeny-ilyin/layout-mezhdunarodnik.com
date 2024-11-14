@@ -21,6 +21,12 @@
 
 .bg-blue {
 	color: $white;
+	background: $brand-color-primary !important;
+	--bg-full: #{$brand-color-primary};
+}
+
+.bg-siniy {
+	color: $white;
 	background: $accent-siniy !important;
 	--bg-full: #{$accent-siniy};
 }
