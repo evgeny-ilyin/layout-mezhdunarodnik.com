@@ -697,6 +697,11 @@ i {
   background: var(--brand-electric)!important;
   --bg-full: var(--brand-electric)
 }
+.bg-fioletovyy {
+  color: var(--white);
+  background: var(--accent-fioletovyy)!important;
+  --bg-full: var(--accent-fioletovyy)
+}
 .bg-malahit {
   color: var(--white);
   background: var(--accent-malahit)!important;
@@ -1591,8 +1596,11 @@ img::selection {
   padding: 12px 17px 12px 11px;
   background: var(--brand-electric)
 }
+.badge__link:active,
+.badge__link:focus,
 .badge__link:hover {
-  background: var(--accent-siniy)
+  color: var(--white);
+  background: var(--brand-red)
 }
 .arrows-line {
   position: relative;
