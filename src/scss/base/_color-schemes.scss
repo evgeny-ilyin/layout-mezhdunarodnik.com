@@ -36,6 +36,12 @@
 	--bg-full: #{$brand-electric};
 }
 
+.bg-fioletovyy {
+	color: $white;
+	background: $accent-fioletovyy !important;
+	--bg-full: #{$accent-fioletovyy};
+}
+
 .bg-malahit {
 	color: $white;
 	background: $accent-malahit !important;

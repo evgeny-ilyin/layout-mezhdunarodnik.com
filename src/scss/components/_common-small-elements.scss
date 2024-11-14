@@ -62,8 +62,9 @@
 		padding: 12px 17px 12px 11px;
 		background: $brand-electric;
 
-		@include on-hover {
-			background: $accent-siniy;
+		@include on-event {
+			color: $white;
+			background: $red;
 		}
 	}
 }
