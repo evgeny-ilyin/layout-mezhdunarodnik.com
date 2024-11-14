@@ -1,0 +1,32 @@
+.swiper-gallery {
+	--img-w: 205px;
+
+	@include resp-from(xl) {
+		--img-w: 274px;
+	}
+
+	// .swiper-gallery__link
+	&__link {
+		text-decoration: none;
+
+		picture,
+		img {
+			width: var(--img-w);
+			height: var(--img-w);
+			object-fit: cover;
+		}
+	}
+
+	// .swiper-gallery__title
+	&__title {
+		font-size: rem(22);
+		font-weight: 400;
+		line-height: 127%;
+		margin-top: 18px;
+		text-align: right;
+	}
+
+	.swiper-slide {
+		width: auto;
+	}
+}

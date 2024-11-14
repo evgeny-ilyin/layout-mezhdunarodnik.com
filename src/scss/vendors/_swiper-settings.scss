@@ -20,6 +20,10 @@
 		--swiper-pagination-bullet-horizontal-gap: 8px;
 	}
 
+	* {
+		outline: none;
+	}
+
 	.swiper-slide {
 		height: auto;
 
@@ -39,12 +43,12 @@
 	}
 }
 
-.swiper-simple {
+.js-swiper-simple {
 	margin-top: 20px;
 	margin-bottom: 20px;
 
 	@include resp-from(xl) {
-		margin-top: 30px;
+		margin-top: 20px;
 		margin-bottom: 30px;
 	}
 
@@ -57,7 +61,7 @@
 	}
 }
 
-.swiper-teachers {
+.js-swiper-auto {
 	margin-top: 20px;
 
 	.swiper {
@@ -69,6 +73,7 @@
 	}
 
 	.swiper-slide {
-		width: 160px;
+		// width: 160px;
+		width: auto;
 	}
 }

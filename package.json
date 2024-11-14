@@ -47,8 +47,9 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
-		"lc-select": "^1.1.8",
+		"@fancyapps/ui": "5.0.36",
+		"lc-select": "1.1.8",
 		"swiper": "11.1.14",
-		"vanilla-text-mask": "^5.1.1"
+		"vanilla-text-mask": "5.1.1"
 	}
 }

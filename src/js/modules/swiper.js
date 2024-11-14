@@ -291,7 +291,7 @@ export function swipersInit() {
 		});
 	});
 
-	const swiperSimple = document.querySelectorAll(".swiper-simple");
+	const swiperSimple = document.querySelectorAll(".js-swiper-simple");
 	swiperSimple.forEach((el) => {
 		let swiper = el.querySelector(".swiper"),
 			pagination = el.querySelector(".swiper-pagination");
@@ -337,8 +337,8 @@ export function swipersInit() {
 		});
 	});
 
-	const swiperTeachers = document.querySelectorAll(".swiper-teachers");
-	swiperTeachers.forEach((el) => {
+	const swiperAuto = document.querySelectorAll(".js-swiper-auto");
+	swiperAuto.forEach((el) => {
 		let swiper = el.querySelector(".swiper"),
 			pagination = el.querySelector(".swiper-pagination");
 
@@ -346,7 +346,7 @@ export function swipersInit() {
 			modules: [Pagination],
 			slidesPerView: "auto",
 			slidesPerGroup: 1,
-			spaceBetween: 35,
+			spaceBetween: 20,
 			loop: false,
 			// centeredSlides: true,
 			// centeredSlidesBounds: true,
@@ -369,6 +369,7 @@ export function swipersInit() {
 					},
 				},
 				1280: {
+					spaceBetween: 35,
 					slidesPerGroup: 3,
 					centeredSlides: false,
 					pagination: {
