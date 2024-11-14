@@ -669,6 +669,9 @@ i {
 .mt40 {
   margin-top: 40px!important
 }
+.pb20 {
+  padding-bottom: 20px!important
+}
 .bg-white {
   background: var(--white)!important;
   --bg-full: var(--white)
@@ -684,6 +687,11 @@ i {
   border-color: var(--accent-brusnika)
 }
 .bg-blue {
+  color: var(--white);
+  background: var(--brand-dark-blue)!important;
+  --bg-full: var(--brand-dark-blue)
+}
+.bg-siniy {
   color: var(--white);
   background: var(--accent-siniy)!important;
   --bg-full: var(--accent-siniy)
@@ -1220,6 +1228,9 @@ img::selection {
   gap: 17px;
   padding-top: 16px;
   margin-top: auto
+}
+.banner-top {
+  padding-bottom: 50px
 }
 .banner-top .block-text__decor .character {
   bottom: -50px
