@@ -544,6 +544,9 @@ button.swiper-pagination-bullet {
   --swiper-pagination-bullet-height: 2px;
   --swiper-pagination-bullet-horizontal-gap: 5px
 }
+.swiper * {
+  outline: 0
+}
 .swiper .swiper-slide {
   height: auto
 }
@@ -560,21 +563,21 @@ button.swiper-pagination-bullet {
 .swiper .swiper-pagination-bullet:hover {
   --swiper-pagination-bullet-inactive-opacity: 1
 }
-.swiper-simple {
+.js-swiper-simple {
   margin-top: 20px;
   margin-bottom: 20px
 }
-.swiper-simple .swiper {
+.js-swiper-simple .swiper {
   overflow: visible
 }
-.swiper-teachers {
+.js-swiper-auto {
   margin-top: 20px
 }
-.swiper-teachers .swiper {
+.js-swiper-auto .swiper {
   overflow: visible
 }
-.swiper-teachers .swiper-slide {
-  width: 160px
+.js-swiper-auto .swiper-slide {
+  width: auto
 }
 .swiper-top .swiper {
   --swiper-pagination-bottom: 20px;
@@ -837,6 +840,32 @@ button.swiper-pagination-bullet {
   line-height: 129%;
   padding-right: 10px
 }
+.swiper-teachers .swiper-slide {
+  width: 160px
+}
+.swiper-gallery {
+  --img-w: 205px
+}
+.swiper-gallery__link {
+  text-decoration: none
+}
+.swiper-gallery__link img,
+.swiper-gallery__link picture {
+  width: var(--img-w);
+  height: var(--img-w);
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.swiper-gallery__title {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 127%;
+  margin-top: 18px;
+  text-align: right
+}
+.swiper-gallery .swiper-slide {
+  width: auto
+}
 @media (min-width:577px) {
   .swiper-characters__content div {
     font-size: .875rem;
@@ -927,14 +956,14 @@ button.swiper-pagination-bullet {
     --swiper-pagination-bullet-height: 4px;
     --swiper-pagination-bullet-horizontal-gap: 8px
   }
-  .swiper-simple {
-    margin-top: 30px;
+  .js-swiper-simple {
+    margin-top: 20px;
     margin-bottom: 30px
   }
-  .swiper-simple .swiper {
+  .js-swiper-simple .swiper {
     overflow: hidden
   }
-  .swiper-teachers .swiper {
+  .js-swiper-auto .swiper {
     overflow: hidden
   }
   .swiper-top .swiper {
@@ -955,5 +984,8 @@ button.swiper-pagination-bullet {
   .quote__body {
     font-size: 1.375rem;
     line-height: 127%
+  }
+  .swiper-gallery {
+    --img-w: 274px
   }
 }
