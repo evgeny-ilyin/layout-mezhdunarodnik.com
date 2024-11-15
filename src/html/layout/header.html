@@ -82,6 +82,7 @@
 			"for-teachers": "@@for-teachers",
 			"for-partners": "@@for-partners",
 			"for-press": "@@for-press",
+			"non-educational-activities": "@@non-educational-activities",
 			})
 		</div>
 	</div>
@@ -100,4 +101,32 @@
 			</div>
 		</div>
 	</div>
+
+
+	@@if (submenu === "non-educational-activities") {
+	<div class="header-subnav-inner">
+		<div class="content">
+			<div class="row">
+
+				<div class="header-subnav-inner__wrapper offset-left">
+					<div class="header-subnav-inner__label">
+						Внеучебная деятельность
+					</div>
+					<div class="header-subnav-inner__list">
+						<nav class="nav-sub-inner" role="navigation">
+							<a href="javascript:void(0)">КВН</a>
+							<a href="javascript:void(0)">Спорт</a>
+							<a href="javascript:void(0)">Конкурсы</a>
+							<a href="javascript:void(0)">Волонтёрство</a>
+						</nav>
+					</div>
+
+					<div class="header-subnav-inner__toggle">
+						<button class="submenu-toggle" aria-label="Открыть подменю"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	}
 </header>

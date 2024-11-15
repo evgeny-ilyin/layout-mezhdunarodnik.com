@@ -256,3 +256,38 @@
 		}
 	}
 }
+
+.nav-sub-inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	@include resp-from(xl) {
+		gap: 10px 33px;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		height: 29px;
+		font-size: rem(14);
+		line-height: 91%;
+		letter-spacing: 0.01em;
+		text-decoration: none;
+		border: 1px solid currentColor;
+		background: $white;
+		padding: 1px 10px 0;
+
+		@include on-event {
+			color: $white;
+			background: $brand-color-primary;
+			border-color: $brand-color-primary;
+		}
+
+		&.is-active {
+			color: $white;
+			background: $brand-color-primary;
+			border-color: $brand-color-primary;
+		}
+	}
+}

@@ -8,6 +8,7 @@ import { globalForm } from "./modules/form-submit.js";
 addEventListener("DOMContentLoaded", () => {
 	fn.isTouchDevice();
 	fn.hamburgerMenu();
+	fn.subMenu();
 	fn.clickAndDrag();
 	fn.scrollHorisontallyByWheel();
 	fn.accordion();

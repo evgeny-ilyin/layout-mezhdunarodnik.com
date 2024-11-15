@@ -24,6 +24,50 @@
 	}
 }
 
+.submenu-toggle {
+	--cross-size: 33px;
+	position: relative;
+	cursor: pointer;
+	width: var(--cross-size);
+	height: var(--cross-size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: 0;
+
+	@include resp-from(xl) {
+		display: none;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		transition: all $transition-default;
+	}
+
+	&::before {
+		right: calc((var(--cross-size) - 1px) / 2);
+		height: var(--cross-size);
+		border-left: 1px solid $black;
+		z-index: 1;
+	}
+
+	&::after {
+		right: 0;
+		width: var(--cross-size);
+		border-top: 1px solid $black;
+	}
+
+	&.is-active {
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+}
+
 //* squeeze style from https://jonsuh.com/hamburgers/ */
 .hamburger-box {
 	cursor: pointer;

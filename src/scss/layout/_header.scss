@@ -18,7 +18,7 @@
 	// .header__main
 	&__main {
 		position: relative;
-		z-index: 2;
+		z-index: 10;
 		background: $white;
 		border-bottom: 1px solid $brand-color-primary;
 	}
@@ -200,7 +200,7 @@
 	// .header__nav
 	&__nav {
 		position: absolute;
-		z-index: 1;
+		z-index: 9;
 		overflow: hidden;
 		overflow-y: auto;
 		background: $brand-color-primary;
@@ -226,6 +226,8 @@
 		background: $white;
 		overflow: hidden;
 		overflow-x: auto;
+		position: relative;
+		z-index: 8;
 	}
 }
 
@@ -265,6 +267,72 @@
 		@include resp-from(lg) {
 			height: 59px;
 		}
+	}
+}
+
+.header-subnav-inner {
+	background: $white;
+	border-bottom: 1px solid $brand-color-primary;
+
+	// .header-subnav-inner__wrapper
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: 49px;
+	}
+
+	// .header-subnav-inner__label
+	&__label {
+		flex: 0 1 auto;
+		font-weight: 600;
+		font-size: rem(16);
+		line-height: 125%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+			line-height: 109%;
+		}
+	}
+
+	// .header-subnav-inner__list
+	&__list {
+		background: $white;
+		display: flex;
+		align-items: center;
+
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: fit-content;
+		padding: var(--grid-padding);
+
+		@include resp-from(xl) {
+			position: relative;
+			z-index: 1;
+			width: auto;
+			padding: 0;
+		}
+
+		&.is-active {
+			z-index: 7;
+			top: 100%;
+			border-bottom: 1px solid $brand-color-primary;
+
+			@include resp-from(xl) {
+				z-index: 1;
+				top: 0;
+				border: 0;
+			}
+		}
+	}
+
+	// .header-subnav-inner__toggle
+	&__toggle {
+		margin-left: auto;
 	}
 }
 

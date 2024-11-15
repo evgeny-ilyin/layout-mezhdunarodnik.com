@@ -87,6 +87,23 @@ export function hamburgerMenu() {
 	});
 }
 
+export function subMenu() {
+	const menuButton = document.querySelector(".submenu-toggle"),
+		menuWrapper = document.querySelector(".header-subnav-inner__list"),
+		activeClass = "is-active";
+
+	document.addEventListener("click", (e) => {
+		if (!menuWrapper.contains(e.target) && !e.target.closest(".submenu-toggle")) {
+			menuButton.click();
+		}
+	});
+
+	menuButton.addEventListener("click", () => {
+		menuButton.classList.toggle(activeClass);
+		menuWrapper.classList.toggle(activeClass);
+	});
+}
+
 export function clickAndDrag() {
 	document.addEventListener("mousedown", (e) => {
 		const scroll_speed = 1.5,
