@@ -755,6 +755,10 @@ button.swiper-pagination-bullet {
   -o-object-fit: cover;
   object-fit: cover
 }
+.swiper-info_gallery img,
+.swiper-info_gallery picture {
+  position: relative
+}
 .swiper-quotes {
   max-width: 432px;
   margin: 0 auto

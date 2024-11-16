@@ -144,6 +144,25 @@ function hamburgerMenu() {
 	});
 }
 
+function subMenu() {
+	const menuButton = document.querySelector(".submenu-toggle"),
+		menuWrapper = document.querySelector(".header-subnav-inner__list"),
+		activeClass = "is-active";
+
+	if (!menuButton) return;
+
+	document.addEventListener("click", (e) => {
+		if (!menuWrapper.contains(e.target) && !e.target.closest(".submenu-toggle") && menuButton.classList.contains(activeClass)) {
+			menuButton.click();
+		}
+	});
+
+	menuButton.addEventListener("click", () => {
+		menuButton.classList.toggle(activeClass);
+		menuWrapper.classList.toggle(activeClass);
+	});
+}
+
 function clickAndDrag() {
 	document.addEventListener("mousedown", (e) => {
 		const scroll_speed = 1.5,
@@ -10638,6 +10657,7 @@ addEventListener("DOMContentLoaded", () => {
 addEventListener("DOMContentLoaded", () => {
 	isTouchDevice();
 	hamburgerMenu();
+	subMenu();
 	clickAndDrag();
 	scrollHorisontallyByWheel();
 	accordion();
