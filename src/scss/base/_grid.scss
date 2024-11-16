@@ -409,3 +409,84 @@
 	// 	width: 83.33333333%;
 	// }
 }
+
+/**
+ * Inner pages grids
+ */
+.grid {
+	display: grid;
+	gap: 12px 12px;
+
+	@include resp-from(md) {
+		gap: 16px 16px;
+	}
+
+	// 2 cols
+
+	// .grid_xm-2
+	&_xm-2 {
+		@include resp-from(xm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .grid_md-2
+	&_md-2 {
+		@include resp-from(md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .grid_lg-2
+	&_lg-2 {
+		@include resp-from(lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .grid_xl-2
+	&_xl-2 {
+		@include resp-from(xl) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// 3 cols
+
+	// .grid_md-3
+	&_md-3 {
+		@include resp-from(md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// .grid_lg-3
+	&_lg-3 {
+		@include resp-from(lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// .grid_xl-3
+	&_xl-3 {
+		@include resp-from(xl) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// 4 cols
+
+	// .grid_lg-4
+	&_lg-4 {
+		@include resp-from(lg) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	// .grid_xl-4
+	&_xl-4 {
+		@include resp-from(xl) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

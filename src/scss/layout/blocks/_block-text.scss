@@ -120,6 +120,35 @@
 		}
 	}
 
+	// .block-text__note
+	&__note {
+		font-size: rem(20);
+		line-height: 115%;
+		margin-bottom: 32px !important;
+
+		@include resp-from(md) {
+			font-size: rem(16);
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(14);
+			line-height: 129%;
+			margin-bottom: 45px !important;
+		}
+
+		.row {
+			--grid-padding: 10px;
+		}
+
+		li,p {
+			color: $gray-dark;
+		}
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+
 	// .block-text__decor
 	&__decor {
 		--grid-multiplier: 0.5;
@@ -136,7 +165,7 @@
 			}
 		}
 
-		@include when-inside('.banner-top') {
+		@include when-inside(".banner-top") {
 			margin-bottom: 0 !important;
 		}
 	}

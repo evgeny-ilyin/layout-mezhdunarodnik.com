@@ -63,4 +63,12 @@
 		z-index: -1;
 		object-fit: cover;
 	}
+
+	// .swiper-info_gallery
+	&_gallery {
+		img,
+		picture {
+			position: relative;
+		}
+	}
 }

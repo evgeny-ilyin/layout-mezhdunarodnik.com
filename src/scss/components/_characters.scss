@@ -53,6 +53,25 @@
 		}
 	}
 
+	// .character_small
+	&_small {
+		svg {
+			width: 144px;
+			height: 130px;
+			margin-bottom: -10%;
+
+			@include resp-from(md) {
+				width: 115px;
+				height: 105px;
+			}
+
+			@include resp-from(xl) {
+				width: 144px;
+				height: 130px;
+			}
+		}
+	}
+
 	@include when-inside(".swiper-characters") {
 		svg {
 			width: 150px;
@@ -144,6 +163,19 @@
 		align-self: flex-start;
 	}
 
+	@include when-inside(".character_small") {
+		font-size: rem(14);
+		line-height: 104%;
+
+		@include resp-from(md) {
+			font-size: rem(11);
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(14);
+		}
+	}
+
 	// .frame_brand-red
 	&_brand-red {
 		background: $brand-red;
@@ -205,6 +237,13 @@
 		mask-size: cover;
 		max-width: 271px;
 		padding: 13px 40px 12px 30px;
+	}
+
+	@include when-inside('.grid-decor') {
+		&_shape-4 {
+			mask-size: 100%;
+			padding: 13px 20px 12px 20px;
+		}
 	}
 
 	@include when-inside(".swiper") {

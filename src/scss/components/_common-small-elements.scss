@@ -102,3 +102,89 @@
 		margin-bottom: 0;
 	}
 }
+
+.achievements {
+	max-width: 80vw;
+	margin: 0 auto;
+}
+
+.achievement {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 24px;
+
+	@include resp-from(md) {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 20px;
+	}
+
+	// .achievement__title
+	&__title {
+		font-family: $family-firs;
+		font-size: rem(120);
+		font-weight: 600;
+		line-height: 0.82;
+		color: $brand-red;
+		margin-bottom: 10px;
+
+		@include resp-from(md) {
+			font-size: rem(80);
+		}
+	}
+
+	// .achievement__body
+	&__body {
+		font-size: rem(16);
+		line-height: 1.3;
+		max-width: 160px;
+
+		@include resp-from(md) {
+			line-height: 1.1;
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(14);
+			line-height: 1.3;
+		}
+
+		b,
+		strong {
+			display: block;
+			text-align: center;
+			font-size: rem(20);
+			font-weight: 700;
+			line-height: 1.1;
+
+			@include resp-from(md) {
+				text-align: left;
+			}
+
+			@include resp-from(xl) {
+				font-size: rem(22);
+				line-height: 1.3;
+			}
+		}
+	}
+}
+
+.grid-decor {
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+
+	@include resp-from(xl) {
+		flex-direction: row;
+	}
+
+	// .grid-decor__decor
+	&__decor {
+		flex: 1 0 auto;
+		width: 212px;
+	}
+
+	// .grid-decor__body
+	&__body {
+	}
+}

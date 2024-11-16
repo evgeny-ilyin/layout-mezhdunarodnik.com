@@ -92,8 +92,10 @@ export function subMenu() {
 		menuWrapper = document.querySelector(".header-subnav-inner__list"),
 		activeClass = "is-active";
 
+	if (!menuButton) return;
+
 	document.addEventListener("click", (e) => {
-		if (!menuWrapper.contains(e.target) && !e.target.closest(".submenu-toggle")) {
+		if (!menuWrapper.contains(e.target) && !e.target.closest(".submenu-toggle") && menuButton.classList.contains(activeClass)) {
 			menuButton.click();
 		}
 	});

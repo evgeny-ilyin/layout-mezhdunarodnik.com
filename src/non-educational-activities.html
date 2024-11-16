@@ -1,0 +1,29 @@
+@@include('html/components/head.html', {
+"title": "Внеучебная деятельность"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"non-educational-activities": "is-active",
+	"submenu": "non-educational-activities"
+	})
+
+	<main class="container">
+		@@include('html/layout/blocks/two-cols-img-right-5.html')
+		@@include('html/layout/blocks/grid-characters.html')
+		@@include('html/layout/blocks/two-cols-img-right-6.html')
+		@@include('html/layout/swipers/swiper-info-gallery-1.html')
+		@@include('html/layout/blocks/two-cols-img-right-7.html')
+		@@include('html/layout/blocks/grid-sports.html')
+		@@include('html/layout/swipers/swiper-info-gallery-2.html')
+		<hr>
+		@@include('html/layout/blocks/two-cols-img-right-8.html')
+		@@include('html/layout/blocks/accordion-3.html')
+		@@include('html/layout/blocks/two-cols-img-right-9.html')
+		@@include('html/layout/blocks/accordion-4.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>
