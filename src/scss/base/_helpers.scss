@@ -92,7 +92,7 @@
 }
 
 .gap-40 {
-	gap: 40px;
+	gap: 40px !important;
 }
 
 @include resp-from(md) {

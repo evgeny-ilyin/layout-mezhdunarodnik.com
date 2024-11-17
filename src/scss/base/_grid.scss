@@ -283,20 +283,20 @@
 	// 	width: 33.33333333%;
 	// }
 
-	// .col-lg-5 {
-	// 	flex: 0 0 auto;
-	// 	width: 41.66666667%;
-	// }
+	.col-lg-5 {
+		flex: 0 0 auto;
+		width: 41.66666667%;
+	}
 
-	// .col-lg-6 {
-	// 	flex: 0 0 auto;
-	// 	width: 50%;
-	// }
+	.col-lg-6 {
+		flex: 0 0 auto;
+		width: 50%;
+	}
 
-	// .col-lg-7 {
-	// 	flex: 0 0 auto;
-	// 	width: 58.33333333%;
-	// }
+	.col-lg-7 {
+		flex: 0 0 auto;
+		width: 58.33333333%;
+	}
 
 	.col-lg-8 {
 		flex: 0 0 auto;
@@ -389,6 +389,11 @@
 }
 
 @include resp-from(xl) {
+	// .col-xl-5 {
+	// 	flex: 0 0 auto;
+	// 	width: 41.66666667%;
+	// }
+
 	// .col-xl-7 {
 	// 	flex: 0 0 auto;
 	// 	width: 58.33333333%;

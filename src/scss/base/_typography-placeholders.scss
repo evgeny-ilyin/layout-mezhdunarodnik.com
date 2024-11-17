@@ -18,16 +18,16 @@
 }
 
 %h2-heading {
-	font-size: rem(21);
+	font-size: rem(25);
 	line-height: 1.1;
 	margin-bottom: 15px;
 
 	@include resp-from(md) {
-		font-size: rem(21);
+		font-size: rem(20);
 	}
 
 	@include resp-from(xl) {
-		font-size: rem(34);
+		font-size: rem(22);
 		margin-bottom: 20px;
 	}
 

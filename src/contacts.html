@@ -1,0 +1,33 @@
+@@include('html/components/head.html', {
+"title": "Контакты"
+})
+<body>
+	@@include('html/layout/header.html', {"submenu": "contacts"})
+
+	<main class="container">
+		@@include('html/layout/blocks/contacts-map.html')
+		@@include('html/layout/blocks/contacts-body.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+
+	<!-- Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах. -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3"></script>
+	<script>
+		let data = {
+			"pointerIcon": "img/icon-map-pointer.svg",
+			"type": "FeatureCollection",
+			"features": [
+				{
+					"type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [55.667345, 37.475603] }, "properties": {
+						"balloonContent": `<svg><use xlink:href="#logo"></use></svg>`
+					}
+				}
+			]
+		};
+		ymaps.ready(mapInit);
+	</script>
+</body>
+</html>
