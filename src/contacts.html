@@ -2,7 +2,10 @@
 "title": "Контакты"
 })
 <body>
-	@@include('html/layout/header.html', {"submenu": "contacts"})
+	@@include('html/layout/header.html', {
+	"contacts": "is-active",
+	"submenu": "contacts"
+	})
 
 	<main class="container">
 		@@include('html/layout/blocks/contacts-map.html')

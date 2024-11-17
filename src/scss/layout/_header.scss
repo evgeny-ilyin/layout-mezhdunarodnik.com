@@ -358,6 +358,11 @@
 		}
 	}
 
+	@include on-event {
+		color: $brand-color-primary;
+		text-decoration-color: $brand-color-primary;
+	}
+
 	// .profile-link__icon
 	&__icon {
 		width: 38px;

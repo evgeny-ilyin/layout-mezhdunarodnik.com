@@ -1,0 +1,18 @@
+@@include('html/components/head.html', {
+"title": "Преподаватели"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"teachers": "is-active",
+	"submenu": "teachers"
+	})
+
+	<main class="container">
+		@@include('html/layout/blocks/teachers-list.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>

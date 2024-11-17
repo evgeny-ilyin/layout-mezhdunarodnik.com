@@ -1,0 +1,63 @@
+.persons {
+	margin-bottom: 80px;
+	gap: 60px;
+
+	@include resp-from(xl) {
+		gap: 55px;
+	}
+}
+
+.person {
+	display: flex;
+	gap: 28px 38px;
+	flex-direction: column;
+
+	@include resp-from(xl) {
+		flex-direction: row;
+	}
+
+	// .person__photo
+	&__photo {
+		flex: 1 0 320px;
+
+		@include resp-from(xl) {
+			flex: 1 0 252px;
+		}
+	}
+
+	// .person__body
+	&__body {
+		flex: 1 1 100%;
+	}
+
+	// .person__name
+	&__name {
+		font-size: rem(30);
+		line-height: 1;
+		margin-bottom: 22px;
+
+		@include resp-from(xl) {
+			font-size: rem(36);
+			width: min-content;
+			margin-bottom: 32px;
+		}
+
+		a {
+			text-decoration-color: transparent;
+
+			@include on-hover {
+				text-decoration-color: currentColor;
+			}
+		}
+	}
+
+	// .person__position
+	&__position {
+		font-size: rem(16);
+		line-height: 1.3;
+
+		@include resp-from(xl) {
+			font-size: rem(14);
+		}
+	}
+}
