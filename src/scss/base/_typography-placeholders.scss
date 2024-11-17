@@ -126,7 +126,8 @@
 	transition: all $transition-default;
 
 	@include on-hover {
-		text-decoration-color: currentColor;
+		color: $brand-red;
+		text-decoration-color: $brand-red;
 	}
 
 	@include on-active {
