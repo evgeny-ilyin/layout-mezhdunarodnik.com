@@ -802,6 +802,9 @@ img::selection {
 .block-text__body:last-child {
   margin-bottom: 0!important
 }
+.block-text__body + .block-text__list {
+  margin-top: -15px
+}
 .block-text__note {
   font-size: 1.25rem;
   line-height: 115%;
@@ -1039,6 +1042,67 @@ img::selection {
 .timeline_steps .t-item__body {
   max-width: 200px
 }
+.timeline-vertical {
+  margin-top: 0;
+  margin-bottom: 0
+}
+.timeline-vertical__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.timeline-vertical .t-item {
+  --edges-gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-right: 0
+}
+.timeline-vertical .t-item:first-child .t-item__step {
+  padding-top: var(--edges-gap)
+}
+.timeline-vertical .t-item:last-child .t-item__step {
+  padding-bottom: var(--edges-gap)
+}
+.timeline-vertical .t-item:last-child .t-item__step::after {
+  display: none
+}
+.timeline-vertical .t-item::after,
+.timeline-vertical .t-item::before {
+  display: none
+}
+.timeline-vertical .t-item__step {
+  position: relative;
+  color: var(--brand-red);
+  margin: 0
+}
+.timeline-vertical .t-item__step div {
+  font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
+  font-size: 7.5rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase
+}
+.timeline-vertical .t-item__step span {
+  font-family: Hint,Roboto,Helvetica,"Open Sans",Arial,sans-serif;
+  display: block;
+  font-size: 1.5rem!important
+}
+.timeline-vertical .t-item .t-item__wrapper {
+  margin-bottom: 35px;
+  padding-top: 23px
+}
+.timeline-vertical .t-item .t-item__wrapper p {
+  color: var(--gray-dark)
+}
 .t-item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 165px;
@@ -1055,6 +1119,9 @@ img::selection {
   background: var(--brand-dark-blue);
   top: var(--line-top);
   position: absolute
+}
+.t-item__wrapper {
+  gap: 15px 100px
 }
 .t-item__step {
   color: var(--brand-electric);
@@ -2438,6 +2505,45 @@ fieldset {
   .benefits__item sup {
     font-size: 1.1875rem
   }
+  .timeline-vertical .t-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .timeline-vertical .t-item:first-child .t-item__wrapper {
+    padding-top: var(--edges-gap)
+  }
+  .timeline-vertical .t-item:last-child .t-item__wrapper {
+    padding-bottom: var(--edges-gap)
+  }
+  .timeline-vertical .t-item__step {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 140px;
+    flex: 0 0 140px;
+    border-right: 1px solid var(--brand-dark-blue)
+  }
+  .timeline-vertical .t-item__step::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -8px;
+    bottom: 27px;
+    z-index: 1;
+    width: 16px;
+    height: 28px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: var(--bg-full,#fff) var(--svg-arrow-timeline) center/11px 20px no-repeat
+  }
+  .timeline-vertical .t-item__step div {
+    font-size: 5rem
+  }
+  .timeline-vertical .t-item .t-item__wrapper {
+    padding-left: 65px;
+    padding-top: 0
+  }
   .t-item {
     padding-right: 55px
   }
@@ -2896,6 +3002,13 @@ fieldset {
   .timeline__wrapper {
     --offset-left: 75px;
     --grid-padding: 49px
+  }
+  .timeline-vertical .t-item {
+    --edges-gap: 50px
+  }
+  .timeline-vertical .t-item .t-item__wrapper {
+    margin-bottom: 60px;
+    padding-left: 85px
   }
   .tab-steps {
     margin-left: 0;
