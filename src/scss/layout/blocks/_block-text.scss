@@ -118,6 +118,15 @@
 		&:last-child {
 			margin-bottom: 0 !important;
 		}
+
+		+ .block-text__list {
+			margin-top: -15px;
+		}
+	}
+
+	// .block-text__list
+	&__list {
+
 	}
 
 	// .block-text__note

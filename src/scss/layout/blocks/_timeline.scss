@@ -131,6 +131,133 @@
 	}
 }
 
+.timeline-vertical {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	// .timeline-vertical__wrapper
+	&__wrapper {
+	}
+
+	// .timeline-vertical__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.t-item {
+		--edges-gap: 40px;
+		display: flex;
+		flex-direction: column;
+		padding-right: 0;
+
+		@include resp-from(md) {
+			flex-direction: row;
+		}
+
+		@include resp-from(xl) {
+			--edges-gap: 50px;
+		}
+
+		&:first-child {
+			.t-item__step {
+				padding-top: var(--edges-gap);
+			}
+
+			.t-item__wrapper {
+				@include resp-from(md) {
+					padding-top: var(--edges-gap);
+				}
+			}
+		}
+
+		&:last-child {
+			.t-item__step {
+				padding-bottom: var(--edges-gap);
+
+				&::after {
+					display: none;
+				}
+			}
+
+			.t-item__wrapper {
+				@include resp-from(md) {
+					padding-bottom: var(--edges-gap);
+				}
+			}
+		}
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		// .t-item__step
+		&__step {
+			position: relative;
+			color: $brand-red;
+			margin: 0;
+
+			@include resp-from(md) {
+				flex: 0 0 140px;
+				border-right: 1px solid $brand-color-primary;
+			}
+
+			@include resp-from(md) {
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					right: -8px;
+					bottom: 27px;
+					z-index: 1;
+					width: 16px;
+					height: 28px;
+					transform: rotate(90deg);
+					background: var(--bg-full, #fff) $svg-arrow-timeline center / 11px 20px no-repeat;
+				}
+			}
+
+			div {
+				font-family: $family-firs;
+				font-size: rem(120);
+				line-height: 1;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				@include resp-from(md) {
+					font-size: rem(80);
+				}
+			}
+
+			span {
+				font-family: $family-hint;
+				display: block;
+				font-size: rem(24) !important;
+			}
+		}
+
+		.t-item__wrapper {
+			margin-bottom: 35px;
+			padding-top: 23px;
+
+			@include resp-from(md) {
+				padding-left: 65px;
+				padding-top: 0;
+			}
+
+			@include resp-from(xl) {
+				margin-bottom: 60px;
+				padding-left: 85px;
+			}
+
+			p {
+				color: $gray-dark;
+			}
+		}
+	}
+}
+
 .t-item {
 	flex: 0 0 165px;
 	position: relative;
@@ -148,6 +275,20 @@
 		background: $brand-color-primary;
 		top: var(--line-top);
 		position: absolute;
+	}
+
+	// .t-item__wrapper
+	&__wrapper {
+		// display: grid;
+		// grid-template-columns: repeat(2, 1fr);
+
+		// display: flex;
+		// flex-direction: column;
+		gap: 15px 100px;
+
+		// @include resp-from(xl) {
+		// 	flex-direction: row;
+		// }
 	}
 
 	// .t-item__step
