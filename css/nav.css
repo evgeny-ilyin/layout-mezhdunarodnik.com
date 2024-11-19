@@ -95,9 +95,6 @@
 .nav a:last-child {
   margin-bottom: 0
 }
-.nav a:nth-last-child(nof.nav-heading) {
-  margin-top: 13px
-}
 .nav a.nav-heading {
   font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
   color: var(--white);
@@ -110,6 +107,12 @@
 }
 .nav a.nav-heading:first-child {
   margin-top: 0!important
+}
+.nav a.nav-heading:first-of-type {
+  margin-top: 0
+}
+.nav a.nav-heading:last-of-type {
+  margin-top: 13px
 }
 .nav a.is-active {
   color: var(--brand-red);
@@ -222,13 +225,13 @@
   .nav a[href^="tel:"] {
     font-size: 1rem
   }
-  .nav a:nth-last-child(nof.nav-heading) {
-    margin-top: auto
-  }
   .nav a.nav-heading {
     font-size: 1rem;
     line-height: 110%;
     margin-bottom: 15px
+  }
+  .nav a.nav-heading:last-of-type {
+    margin-top: auto
   }
 }
 @media (min-width:1024px) {
