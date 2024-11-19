@@ -101,7 +101,8 @@ ol {
 	display: block;
 	list-style-type: disc;
 	margin-bottom: 15px;
-	margin-left: -5px;
+	// margin-left: -5px;
+	margin-left: 0;
 	padding-left: 20px;
 
 	li {
@@ -134,9 +135,12 @@ ol {
 }
 
 .text-cols-2 {
-	column-count: 2;
-	column-gap: 60px;
-	column-width: 300px;
+	& > * {
+		column-count: 2;
+		column-gap: 60px;
+		column-width: 300px;
+		margin-bottom: 60px;
+	}
 }
 
 /**

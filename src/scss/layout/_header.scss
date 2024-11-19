@@ -95,6 +95,7 @@
 
 		a {
 			display: flex;
+			color: $brand-color-primary !important;
 		}
 
 		svg {
@@ -278,7 +279,7 @@
 	&__wrapper {
 		display: flex;
 		align-items: center;
-		gap: 49px;
+		gap: 30px;
 	}
 
 	// .header-subnav-inner__label
@@ -291,7 +292,7 @@
 		text-transform: uppercase;
 
 		@include resp-from(xl) {
-			font-size: rem(22);
+			font-size: rem(20);
 			line-height: 109%;
 		}
 	}

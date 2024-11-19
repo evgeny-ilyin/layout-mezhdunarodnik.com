@@ -12,6 +12,11 @@
 		margin-right: 0;
 	}
 
+	@include when-inside(".accordion") {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	// .tab-steps__item
 	&__item {
 		cursor: pointer;
@@ -48,6 +53,26 @@
 
 		@include on-hover {
 			margin-top: -10px;
+		}
+
+		@include when-inside(".tab-steps_n3") {
+			width: 77%;
+
+			@include resp-from(xm) {
+				width: 70%;
+			}
+
+			@include resp-from(md) {
+				width: 420px;
+			}
+
+			@include resp-from(lg) {
+				width: 410px;
+			}
+
+			@include resp-from(xl) {
+				width: 425px;
+			}
 		}
 
 		& > * {

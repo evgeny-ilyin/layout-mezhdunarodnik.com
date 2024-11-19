@@ -85,6 +85,9 @@
 			"non-educational-activities": "@@non-educational-activities",
 			"contacts": "@@contacts",
 			"teachers": "@@teachers",
+			"programms": "@@programms",
+			"information": "@@information",
+			"career": "@@career",
 			})
 		</div>
 	</div>
@@ -132,20 +135,91 @@
 	</div>
 	}
 
-	@@if (submenu === "contacts") {
-	<!-- <div class="header-subnav-inner">
+	@@if (submenu === "programms") {
+	<div class="header-subnav-inner">
 		<div class="content">
 			<div class="row">
 
 				<div class="header-subnav-inner__wrapper offset-left">
 					<div class="header-subnav-inner__label">
-						Контакты
+						Программы обучения
+					</div>
+					<div class="header-subnav-inner__list">
+						<nav class="nav-sub-inner" role="navigation">
+							<a href="#multidisciplinary-training">Многопрофильное обучение</a>
+							<a href="#zarubezhnoe-regionovedenie">Зарубежное регионоведение</a>
+							<a href="#mezhdunarodnyj-bakalavriat">Международный бакалавриат</a>
+							<a href="#yazykovye-programmy">Языковые программы</a>
+						</nav>
+					</div>
+
+					<div class="header-subnav-inner__toggle">
+						<button class="submenu-toggle" aria-label="Открыть подменю"></button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
+	}
 
+	@@if (submenu === "information") {
+	<div class="header-subnav-inner">
+		<div class="content">
+			<div class="row">
+
+				<div class="header-subnav-inner__wrapper offset-left">
+					<div class="header-subnav-inner__label">
+						Информация
+					</div>
+					<div class="header-subnav-inner__list">
+						<nav class="nav-sub-inner" role="navigation">
+							<a href="javascript:void(0)">Как поступить</a>
+							<a href="javascript:void(0)">Расписание</a>
+							<a href="javascript:void(0)">Гранты</a>
+							<a href="javascript:void(0)">Общежитие</a>
+							<a href="javascript:void(0)">Военно-учебный центр</a>
+							<a href="javascript:void(0)">Инфраструктура</a>
+						</nav>
+					</div>
+
+					<div class="header-subnav-inner__toggle">
+						<button class="submenu-toggle" aria-label="Открыть подменю"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	}
+
+	@@if (submenu === "career") {
+	<div class="header-subnav-inner">
+		<div class="content">
+			<div class="row">
+
+				<div class="header-subnav-inner__wrapper offset-left">
+					<div class="header-subnav-inner__label">
+						Карьера
+					</div>
+					<div class="header-subnav-inner__list">
+						<nav class="nav-sub-inner" role="navigation">
+							<a href="javascript:void(0)">Построение карьеры</a>
+							<a href="javascript:void(0)">Вакансии ФМО</a>
+							<a href="javascript:void(0)">Вакансии партнёров</a>
+							<a href="javascript:void(0)">Стажировки</a>
+							<a href="javascript:void(0)">Описание</a>
+						</nav>
+					</div>
+
+					<div class="header-subnav-inner__toggle">
+						<button class="submenu-toggle" aria-label="Открыть подменю"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	}
+
+	@@if (submenu === "contacts") {
 	<div class="content">
 		<div class="row">
 			<div class="offset-left h3">Контакты</div>

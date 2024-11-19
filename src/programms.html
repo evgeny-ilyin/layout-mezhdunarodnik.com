@@ -1,0 +1,54 @@
+@@include('html/components/head.html', {
+"title": "Программы обучения"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"programms": "is-active",
+	"submenu": "programms"
+	})
+
+	<main class="container">
+		@@include('html/layout/blocks/two-cols-img-right-10.html')
+
+		<div class="content bg-full bg-light-gray">
+			<div class="row">
+				<div class="accordion-complex offset-left">
+					@@include('html/layout/accordions/programms-accordion-1.html')
+					@@include('html/layout/accordions/programms-accordion-2.html')
+					@@include('html/layout/accordions/programms-accordion-3.html')
+				</div>
+			</div>
+		</div>
+
+
+		@@include('html/layout/blocks/two-cols-img-right-11.html')
+
+		<div class="content bg-full bg-light-gray">
+			<div class="row">
+				<div class="accordion-complex offset-left">
+					@@include('html/layout/accordions/programms-accordion-4.html')
+					@@include('html/layout/accordions/programms-accordion-5.html')
+				</div>
+			</div>
+		</div>
+		@@include('html/layout/blocks/two-cols-img-right-12.html')
+
+
+		<div class="content bg-full bg-light-gray">
+			<div class="row">
+				<div class="accordion-complex offset-left">
+					@@include('html/layout/accordions/programms-accordion-6.html')
+				</div>
+			</div>
+		</div>
+		@@include('html/layout/blocks/two-cols-img-right-13.html')
+		@@include('html/layout/blocks/three-cols-text.html')
+
+
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>
