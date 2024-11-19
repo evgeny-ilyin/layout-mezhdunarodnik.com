@@ -221,9 +221,12 @@
 		gap: 15px;
 		margin-bottom: 32px !important;
 
-		@include resp-from(xl) {
+		@include resp-from(lg) {
 			flex-direction: row;
 			gap: 26px;
+		}
+
+		@include resp-from(xl) {
 			margin-bottom: 45px !important;
 		}
 	}

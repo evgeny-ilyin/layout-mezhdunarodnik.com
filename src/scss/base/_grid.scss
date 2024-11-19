@@ -463,6 +463,11 @@
 
 	// 2 cols
 
+	// .grid_table
+	&_table {
+		grid-template-columns: 70px 175px;
+	}
+
 	// .grid_xm-2
 	&_xm-2 {
 		@include resp-from(xm) {
