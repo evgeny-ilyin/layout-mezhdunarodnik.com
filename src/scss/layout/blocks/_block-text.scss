@@ -13,7 +13,7 @@
 
 		&:last-child {
 			// &:not(.block-text__buttons) {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 			// }
 		}
 	}
@@ -126,7 +126,6 @@
 
 	// .block-text__list
 	&__list {
-
 	}
 
 	// .block-text__note
@@ -212,6 +211,41 @@
 			img {
 				margin-left: 0;
 			}
+		}
+	}
+
+	// .block-text__2-cols
+	&__2-cols {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		margin-bottom: 32px !important;
+
+		@include resp-from(xl) {
+			flex-direction: row;
+			gap: 26px;
+			margin-bottom: 45px !important;
+		}
+	}
+
+	// .block-text__col-title
+	&__col-title {
+		font-size: rem(30);
+		line-height: 1;
+
+		@include resp-from(xl) {
+			font-size: rem(36);
+		}
+	}
+
+	// .block-text__col-body
+	&__col-body {
+		font-size: rem(20);
+		line-height: 1.2;
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+			line-height: 1.3;
 		}
 	}
 
