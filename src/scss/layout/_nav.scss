@@ -175,13 +175,14 @@
 			margin-bottom: 0;
 		}
 
-		&:nth-last-child(n of .nav-heading) {
-			margin-top: 13px;
+		// некорректно отрабатывает cleanCSS: (nof.nav-heading)
+		// &:nth-last-child(n of .nav-heading) {
+		// 	margin-top: 13px;
 
-			@include resp-from(md) {
-				margin-top: auto;
-			}
-		}
+		// 	@include resp-from(md) {
+		// 		margin-top: auto;
+		// 	}
+		// }
 
 		&.nav-heading {
 			font-family: $family-firs;
@@ -206,6 +207,18 @@
 
 			&:first-child {
 				margin-top: 0 !important;
+			}
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+
+			&:last-of-type {
+				margin-top: 13px;
+
+				@include resp-from(md) {
+					margin-top: auto;
+				}
 			}
 		}
 
