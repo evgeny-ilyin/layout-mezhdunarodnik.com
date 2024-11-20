@@ -13,6 +13,7 @@ addEventListener("DOMContentLoaded", () => {
 	fn.scrollHorisontallyByWheel();
 	fn.accordion();
 	fn.tabsHandler();
+	fn.modalHandler();
 
 	sl.selectsInit();
 

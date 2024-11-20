@@ -1,0 +1,109 @@
+.modal {
+	--modal-padding-y: 24px;
+	--modal-padding-x: 32px;
+	min-width: $min-width;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+	width: 50vw;
+	// transition: all $transition-default;
+	padding: var(--modal-padding-y) var(--modal-padding-x);
+	background: $white;
+	box-shadow: 0 4px 132px 0 rgba(54, 45, 21, 0.2);
+
+	@include resp-to(md) {
+		width: 100% !important;
+	}
+
+	@include resp-from(md) {
+		// max-width: var(--modal-max-w);
+		max-width: 100%;
+		top: 143px;
+		right: auto;
+		left: 50%;
+		bottom: auto;
+		transform: translateX(-50%);
+	}
+
+	&.is-active {
+		z-index: 12;
+		opacity: 1;
+	}
+
+	// .modal__head
+	&__head {
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: -0.52px;
+		display: flex;
+		align-items: center;
+		margin: 0 40px 32px 0;
+
+		@include resp-from(md) {
+			font-size: rem(26);
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+			margin-right: 8px;
+		}
+	}
+
+	// .modal__close
+	&__close {
+		position: relative;
+
+		.btn {
+			position: relative;
+			top: auto;
+			right: auto;
+		}
+	}
+
+	// .modal__body
+	&__body {
+	}
+
+	// .modal__form
+	&__form {
+		margin-bottom: 14px;
+
+		label > input {
+			margin-top: 7px;
+		}
+
+		textarea {
+			resize: none;
+		}
+	}
+}
+
+// black overlay
+.overlay {
+	&::before {
+		content: "";
+		display: block;
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(51, 51, 51, 0.5);
+		opacity: 0;
+		transition: all $transition-default;
+	}
+	&.is-active {
+		&::before {
+			opacity: 1;
+			z-index: 11;
+		}
+	}
+}

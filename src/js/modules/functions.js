@@ -218,3 +218,31 @@ export function tabsHandler() {
 		});
 	});
 }
+
+export function modalHandler() {
+	document.addEventListener("click", (e) => {
+		const modalClass = "modal",
+			isActiveClass = "is-active",
+			modalExist = document.querySelector(`.${modalClass}.${isActiveClass}`),
+			modalShow = e.target.closest(".js-modal-show"),
+			modalClose = e.target.closest([".js-modal-close", ".overlay"]),
+			overlay = document.querySelector(".overlay");
+
+		if (modalShow) {
+			e.preventDefault();
+			const target = modalShow.dataset.target,
+				modal = document.querySelector(`[data-id="${target}"]`);
+			if (!target || !modal) return;
+
+			modal.classList.add(isActiveClass);
+			overlay.classList.add(isActiveClass);
+		}
+
+		if (modalExist && (!modalExist.contains(e.target) || modalClose)) {
+			if(e.target.closest(`.lcslt-shown`)) return; // dropdown selector outside .modal
+			modalExist.classList.remove(isActiveClass);
+			overlay.classList.remove(isActiveClass);
+		}
+
+	});
+}

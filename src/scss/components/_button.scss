@@ -66,4 +66,62 @@
 		min-height: 29px;
 		font-size: rem(14) !important;
 	}
+
+	// .btn_close
+	&_close {
+		--color: #{$gray-dark};
+		position: absolute;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 15px;
+		right: 17px;
+		width: 24px;
+		height: 24px;
+		min-height: auto;
+		padding: 0;
+		border: 0;
+		background-color: transparent !important;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 18px;
+			background-color: var(--color);
+			transition: background-color $transition-default;
+			// box-shadow: 0 0 1px 0 $black;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		@include on-hover {
+			&::before,
+			&::after {
+				--color: #{$brand-red};
+			}
+		}
+	}
+
+	// .btn_close-modal
+	&_close-modal {
+		position: absolute;
+		top: var(--modal-padding-y);
+		right: calc(var(--modal-padding-x) - 5px);
+
+		@include resp-to(md) {
+			&::before,
+			&::after {
+				height: 25px;
+			}
+		}
+	}
 }
