@@ -1,0 +1,34 @@
+<div class="modal" data-id="grant">
+	<button class="btn btn_close btn_close-modal js-modal-close" aria-label="Закрыть"></button>
+
+	<div class="modal__head">
+		Оставить заявку на&nbsp;грант
+	</div>
+	<div class="modal__body">
+		<div class="modal__form">
+			<form action="#" class="form row" method="post" novalidate>
+					<div class="form__fieldset _column">
+						<div class="form-item">
+							<input type="text" name="name" value="" class="input input_fill" data-required aria-label="Имя" placeholder="Имя *">
+						</div>
+						<div class="form-item">
+							<input type="text" name="surname" value="" class="input input_fill" data-required aria-label="Фамилия" placeholder="Фамилия *">
+						</div>
+						<div class="form-item">
+							<input type="tel" name="phone" value="" class="input input_fill" data-required aria-label="Телефон" placeholder="Ваш телефон *" data-pattern-type="phone">
+						</div>
+					</div>
+					<div class="form__fieldset">
+						<div class="form-item">
+							<textarea name="message" class="textarea textarea_fill" data-required aria-label="Текст сообщения" placeholder=""></textarea>
+						</div>
+					</div>
+					<div class="form__fieldset">
+						<div class="form-item justify-center-to-md align-end">
+							<button type="submit" class="btn">Отправить</button>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>

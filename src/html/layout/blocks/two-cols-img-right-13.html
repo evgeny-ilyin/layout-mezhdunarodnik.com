@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="block-text__buttons">
-				<a href="javascript:void(0)" class="btn">Оставить заявку на&nbsp;грант</a>
+				<button class="btn js-modal-show" data-target="grant">Оставить заявку на&nbsp;грант</button>
 			</div>
 		</div>
 		<div class="offset-left col-md-6">
@@ -26,3 +26,5 @@
 		</div>
 	</div>
 </div>
+
+@@include('../modals/modal-grant.html', {})
