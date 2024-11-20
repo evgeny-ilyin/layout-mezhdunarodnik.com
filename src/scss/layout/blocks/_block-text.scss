@@ -214,43 +214,43 @@
 		}
 	}
 
-	// .block-text__2-cols
-	&__2-cols {
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
-		margin-bottom: 32px !important;
+	// // .block-text__2-cols
+	// &__2-cols {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	gap: 15px;
+	// 	margin-bottom: 32px !important;
 
-		@include resp-from(lg) {
-			flex-direction: row;
-			gap: 26px;
-		}
+	// 	@include resp-from(lg) {
+	// 		flex-direction: row;
+	// 		gap: 26px;
+	// 	}
 
-		@include resp-from(xl) {
-			margin-bottom: 45px !important;
-		}
-	}
+	// 	@include resp-from(xl) {
+	// 		margin-bottom: 45px !important;
+	// 	}
+	// }
 
-	// .block-text__col-title
-	&__col-title {
-		font-size: rem(30);
-		line-height: 1;
+	// // .block-text__col-title
+	// &__col-title {
+	// 	font-size: rem(30);
+	// 	line-height: 1;
 
-		@include resp-from(xl) {
-			font-size: rem(36);
-		}
-	}
+	// 	@include resp-from(xl) {
+	// 		font-size: rem(36);
+	// 	}
+	// }
 
-	// .block-text__col-body
-	&__col-body {
-		font-size: rem(20);
-		line-height: 1.2;
+	// // .block-text__col-body
+	// &__col-body {
+	// 	font-size: rem(20);
+	// 	line-height: 1.2;
 
-		@include resp-from(xl) {
-			font-size: rem(22);
-			line-height: 1.3;
-		}
-	}
+	// 	@include resp-from(xl) {
+	// 		font-size: rem(22);
+	// 		line-height: 1.3;
+	// 	}
+	// }
 
 	// .block-text__buttons
 	&__buttons {
