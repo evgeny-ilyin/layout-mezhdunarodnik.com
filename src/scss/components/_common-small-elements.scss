@@ -104,8 +104,11 @@
 }
 
 .achievements {
-	max-width: 80vw;
 	margin: 20px auto;
+
+	// @include resp-from(lg) {
+	// 	max-width: 80vw;
+	// }
 }
 
 .achievement {
@@ -118,6 +121,10 @@
 		flex-direction: row;
 		align-items: flex-start;
 		gap: 20px;
+	}
+
+	@include resp-from(xl) {
+		gap: 30px;
 	}
 
 	// .achievement__title
@@ -168,6 +175,7 @@
 			font-size: rem(20);
 			font-weight: 700;
 			line-height: 1.1;
+			margin-bottom: 10px;
 
 			@include resp-from(md) {
 				text-align: left;
@@ -175,7 +183,40 @@
 
 			@include resp-from(xl) {
 				font-size: rem(22);
-				line-height: 1.3;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	// .achievement__shape
+	&__shape {
+		font-family: $family-firs;
+		font-size: rem(48);
+		font-weight: 600;
+		line-height: 1;
+		background: $brand-red;
+		color: $white;
+		padding: 0 15px 15px;
+		margin-bottom: 16px;
+		min-width: 102px;
+		width: 102px;
+		height: 117px;
+		clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+		align-content: center;
+		text-align: center;
+
+		@include resp-from(md) {
+			font-size: rem(48);
+		}
+
+		span {
+			display: block;
+			font-size: rem(32);
+			line-height: 1;
+
+			@include resp-from(md) {
+				// font-size: rem(30);
+				// line-height: 120%;
 			}
 		}
 	}

@@ -1,0 +1,30 @@
+@@include('html/components/head.html', {
+"title": "О факультете"
+})
+<body>
+	@@include('html/layout/header.html', {
+	"about": "is-active",
+	"submenu": ""
+	})
+
+	<main class="container">
+		@@include('html/layout/blocks/two-cols-img-right-19.html')
+		@@include('html/layout/blocks/timeline-history.html')
+		@@include('html/layout/blocks/leadership-head.html')
+		@@include('html/layout/blocks/leadership-body.html')
+		@@include('html/layout/blocks/two-cols-img-left-5.html')
+		<!--  -->
+		@@include('html/layout/blocks/two-cols-img-left-6.html')
+		<hr>
+		@@include('html/layout/blocks/two-cols-img-right-20.html')
+		@@include('html/layout/swipers/swiper-teachers.html')
+		@@include('html/layout/blocks/arrows-line.html')
+		@@include('html/layout/forms/ask-teacher.html')
+		@@include('html/layout/blocks/success-stories.html')
+	</main>
+
+	@@include('html/layout/footer.html')
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>

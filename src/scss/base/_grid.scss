@@ -519,6 +519,13 @@
 		}
 	}
 
+	// .grid_hd-3
+	&_hd-3 {
+		@include resp-from(hd) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
 	// 4 cols
 
 	// .grid_lg-4
@@ -534,4 +541,8 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
+}
+
+.gap-30 {
+	gap: 30px;
 }
