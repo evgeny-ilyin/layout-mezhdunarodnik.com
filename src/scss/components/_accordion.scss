@@ -20,11 +20,15 @@
 			line-height: 1.2;
 		}
 
-		& > div {
+		& > div:not([class]) {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			gap: var(--content-offset-gap);
+
+			@include resp-from(xm) {
+				flex-direction: row;
+			}
 
 			div {
 				display: none;
@@ -42,10 +46,63 @@
 					font-size: rem(14);
 				}
 			}
+		}
+	}
 
-			@include resp-from(xm) {
-				flex-direction: row;
-			}
+	// .accordion__header-wrapper
+	&__header-wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: var(--content-offset-gap);
+
+		@include resp-from(xm) {
+			flex-direction: row;
+			align-items: normal;
+		}
+	}
+
+	// .accordion__header-complex
+	&__header-complex {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	// .accordion__header-row-1
+	&__header-row-1 {
+		font-size: rem(14);
+		font-weight: 400;
+	}
+
+	// .accordion__header-row-2
+	&__header-row-2 {
+		font-size: rem(18);
+		font-weight: 600;
+		display: grid;
+		gap: 5px;
+
+		@include resp-from(xm) {
+			grid-template-columns: 100px 1fr;
+			gap: 0;
+		}
+	}
+
+	// .accordion__department
+	&__department {
+		width: var(--content-offset);
+
+		@include resp-from(xm) {
+			display: block;
+			flex: 0 0 var(--content-offset);
+		}
+
+		svg {
+			width: 78px;
+			height: 90px;
+			display: block;
+			margin: 0 auto;
 		}
 	}
 
@@ -91,11 +148,21 @@
 
 	// .accordion__button
 	&__button {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
 		@include resp-from(xl) {
+			flex-direction: column;
+			align-items: flex-end;
 			position: absolute;
 			right: 0;
 			bottom: 31px;
 			margin-bottom: 0 !important;
+
+			a {
+				font-size: rem(14);
+			}
 
 			.btn {
 				margin-bottom: 0;
@@ -300,30 +367,27 @@
 
 			& > .accordion__header {
 				line-height: 1.15;
-	
+
 				@include resp-from(md) {
 					display: none;
 				}
 			}
-	
+
 			& > .accordion__content {
 				@include resp-from(md) {
 					max-height: none !important;
 					overflow: visible !important;
 				}
-	
+
 				@include resp-to(xl) {
 					padding-right: 0;
 				}
-	
-	
-	
-	
+
 				// для вложенного аккордеона accordion-5.html
 				// .accordion__header {
 				// 	display: flex;
 				// }
-	
+
 				// .accordion__content {
 				// 	@include resp-from(md) {
 				// 		max-height: 0 ;
@@ -332,7 +396,6 @@
 				// }
 			}
 		}
-
 	}
 }
 
