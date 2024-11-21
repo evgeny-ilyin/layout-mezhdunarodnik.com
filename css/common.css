@@ -1685,7 +1685,7 @@ img::selection {
   font-size: 1.25rem;
   line-height: 1.1
 }
-.accordion__header > div {
+.accordion__header > div:not([class]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1698,12 +1698,58 @@ img::selection {
   align-items: center;
   gap: var(--content-offset-gap)
 }
-.accordion__header > div div {
+.accordion__header > div:not([class]) div {
   display: none;
   width: var(--content-offset);
   font-size: 1rem;
   line-height: 1.3;
   font-weight: 700
+}
+.accordion__header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--content-offset-gap)
+}
+.accordion__header-complex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px
+}
+.accordion__header-row-1 {
+  font-size: .875rem;
+  font-weight: 400
+}
+.accordion__header-row-2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: -ms-grid;
+  display: grid;
+  gap: 5px
+}
+.accordion__department {
+  width: var(--content-offset)
+}
+.accordion__department svg {
+  width: 78px;
+  height: 90px;
+  display: block;
+  margin: 0 auto
 }
 .accordion__content {
   position: relative;
@@ -1721,6 +1767,15 @@ img::selection {
 }
 .accordion__content > :last-child {
   margin-bottom: 14px
+}
+.accordion__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px
 }
 .accordion_content-offset {
   --content-offset: 80px;
@@ -2574,17 +2629,37 @@ fieldset {
   .tab-steps_n3 .tab-steps__item {
     width: 70%
   }
-  .accordion__header > div div {
+  .accordion__header > div:not([class]) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .accordion__header > div:not([class]) div {
     display: block;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 var(--content-offset);
     flex: 0 0 var(--content-offset)
   }
-  .accordion__header > div {
+  .accordion__header-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row
+    flex-direction: row;
+    -webkit-box-align: normal;
+    -ms-flex-align: normal;
+    align-items: normal
+  }
+  .accordion__header-row-2 {
+    -ms-grid-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr;
+    gap: 0
+  }
+  .accordion__department {
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 var(--content-offset);
+    flex: 0 0 var(--content-offset)
   }
   .accordion__content > span:first-child {
     display: none
@@ -3360,14 +3435,24 @@ fieldset {
     width: 42px;
     height: 42px
   }
-  .accordion__header > div div {
+  .accordion__header > div:not([class]) div {
     font-size: .875rem
   }
   .accordion__button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     position: absolute;
     right: 0;
     bottom: 31px;
     margin-bottom: 0!important
+  }
+  .accordion__button a {
+    font-size: .875rem
   }
   .accordion__button .btn {
     margin-bottom: 0
