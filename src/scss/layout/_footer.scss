@@ -201,6 +201,12 @@
 		display: flex;
 		gap: 20px;
 
+		& > div {
+			// for bitrix include area
+			display: flex;
+			gap: 20px;
+		}
+
 		@include resp-from(xl) {
 			margin-left: 80px;
 		}
@@ -247,6 +253,25 @@
 			@include resp-from(xl) {
 				width: 215px;
 				height: 35px;
+			}
+		}
+
+		// .copyright__logo_en
+		&_en {
+			svg {
+				width: 100%;
+				max-width: 130px;
+				height: 30px;
+	
+				@include resp-from(md) {
+					width: 140px;
+					height: 32px;
+				}
+	
+				@include resp-from(xl) {
+					width: 152px;
+					height: 35px;
+				}
 			}
 		}
 	}

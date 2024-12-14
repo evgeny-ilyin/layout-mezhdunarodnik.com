@@ -38,6 +38,7 @@
 	position: absolute;
 	left: 17px;
 	margin-top: 50px;
+	z-index: 1;
 
 	@include resp-from(xl) {
 		display: block;
