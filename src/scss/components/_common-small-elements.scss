@@ -192,12 +192,12 @@
 	// .achievement__shape
 	&__shape {
 		font-family: $family-firs;
-		font-size: rem(48);
+		font-size: rem(38);
 		font-weight: 600;
 		line-height: 1;
 		background: $brand-red;
 		color: $white;
-		padding: 0 15px 15px;
+		padding: 0 5px 15px;
 		margin-bottom: 16px;
 		min-width: 102px;
 		width: 102px;
@@ -205,15 +205,16 @@
 		clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
 		align-content: center;
 		text-align: center;
+		text-transform: uppercase;
 
 		@include resp-from(md) {
-			font-size: rem(48);
+			font-size: rem(34);
 		}
 
 		span {
-			display: block;
-			font-size: rem(32);
-			line-height: 1;
+			// display: block;
+			// font-size: rem(32);
+			// line-height: 1;
 
 			@include resp-from(md) {
 				// font-size: rem(30);
