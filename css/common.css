@@ -1932,7 +1932,8 @@ img::selection {
   display: none;
   position: absolute;
   left: 17px;
-  margin-top: 50px
+  margin-top: 50px;
+  z-index: 1
 }
 .badge_vertical {
   -webkit-writing-mode: vertical-lr;
@@ -2040,12 +2041,12 @@ img::selection {
 }
 .achievement__shape {
   font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
-  font-size: 3rem;
+  font-size: 2.375rem;
   font-weight: 600;
   line-height: 1;
   background: var(--brand-red);
   color: var(--white);
-  padding: 0 15px 15px;
+  padding: 0 5px 15px;
   margin-bottom: 16px;
   min-width: 102px;
   width: 102px;
@@ -2053,12 +2054,8 @@ img::selection {
   clip-path: polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
   -ms-flex-line-pack: center;
   align-content: center;
-  text-align: center
-}
-.achievement__shape span {
-  display: block;
-  font-size: 2rem;
-  line-height: 1
+  text-align: center;
+  text-transform: uppercase
 }
 .grid-decor {
   display: -webkit-box;
@@ -3006,7 +3003,7 @@ fieldset {
     text-align: left
   }
   .achievement__shape {
-    font-size: 3rem
+    font-size: 2.125rem
   }
   .text-col-title {
     font-size: 5rem;

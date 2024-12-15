@@ -93,6 +93,12 @@
   display: flex;
   gap: 20px
 }
+.f-contacts__social > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px
+}
 .f-contacts__social svg {
   fill: var(--gray);
   width: 40px;
@@ -124,6 +130,11 @@
 .copyright__logo svg {
   width: 100%;
   max-width: 184px;
+  height: 30px
+}
+.copyright__logo_en svg {
+  width: 100%;
+  max-width: 130px;
   height: 30px
 }
 .copyright__text {
@@ -188,6 +199,10 @@
     max-width: none;
     height: 32px
   }
+  .copyright__logo_en svg {
+    width: 140px;
+    height: 32px
+  }
 }
 @media (min-width:1024px) {
   .footer__wrapper {
@@ -237,6 +252,10 @@
   }
   .copyright__logo svg {
     width: 215px;
+    height: 35px
+  }
+  .copyright__logo_en svg {
+    width: 152px;
     height: 35px
   }
   .copyright__text {

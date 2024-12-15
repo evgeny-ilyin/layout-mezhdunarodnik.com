@@ -831,7 +831,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 25px
 }
 .swiper-teachers__name {
-  min-height: 72px;
+  min-height: 50px;
   font-size: 1.1875rem;
   font-weight: 600;
   line-height: 120%;

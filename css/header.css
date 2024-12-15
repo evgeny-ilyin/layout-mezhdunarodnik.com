@@ -39,6 +39,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 9px;
   font-size: .8125rem;
   line-height: 1.4;
@@ -79,6 +82,10 @@
   height: 50px;
   -webkit-transition: width 0s;
   transition: width 0s
+}
+.header__logo_en svg {
+  width: 175px;
+  height: 50px
 }
 .header__partners {
   position: relative;
@@ -419,6 +426,10 @@
   .header__logo svg {
     width: 229px;
     width: clamp(229px,20vw,300px)
+  }
+  .header__logo_en svg {
+    width: 175px;
+    width: clamp(175px,20vw,217px)
   }
 }
 @media (min-width:768px) {
