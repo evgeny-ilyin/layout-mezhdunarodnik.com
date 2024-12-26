@@ -267,10 +267,10 @@
 	}
 
 	@include when-inside(".block-text__decor") {
-		font-size: rem(18);
+		font-size: rem(17);
 
 		@include resp-from(md) {
-			font-size: rem(19);
+			font-size: rem(17);
 		}
 
 		&_shape-3 {
