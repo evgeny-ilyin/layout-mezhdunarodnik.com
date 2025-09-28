@@ -1,7 +1,7 @@
 {
-	"short_name": "Вереяр",
-	"name": "Курорт Вереяр",
-	"description": "Всесезонный горнолыжный и бальнеологический курорт",
+	"short_name": "ФМО",
+	"name": "ФМО",
+	"description": "Факультет международных отношений,
 	"icons": [
 		{ "src": "/favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
 		{ "src": "/favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
